@@ -108,6 +108,16 @@ data/*.par
 data/*.pin
 !data/.gitkeep
 
+# Scene texture and resource folders (textures are packed inside .blend files)
+data/scenes/*_4K-JPG/
+data/scenes/*/textures/
+data/scenes/*/source/
+data/scenes/broadleaf*/
+data/scenes/conifer*/
+data/scenes/Ground_Material/
+data/scenes/*.blend/
+!data/scenes/*.blend
+
 # Static generated files
 *.glb
 *.gltf
