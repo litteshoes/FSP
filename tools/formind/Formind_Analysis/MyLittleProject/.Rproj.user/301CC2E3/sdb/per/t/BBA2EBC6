@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nlibrary(FAST) #loads FAST package\n\npath<-(\"C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject\")\nsetwd(path)\n#********************************************\n# 2. the fast-function\n#********************************************\nmodel<-\"formind.exe\"\n\nparameterFile<-\"bci4.par\"\n\nprojectName<-\"experiment\"\n\n# Modify Parameters\nsetwd(paste0(path,\"/FORMIND/formind_parameters\"))\nPARfile<-paste0(projectName,\".par\")\nmodifyPAR(parameterFile,PARfile\n          , list(myResultFileSwitch.dia = 1\n                 ,Mort_mean_19 = c(0.01,0.015,0.02,0.025)\n          )\n)\n\n# run FORMIND\nsetwd(paste0(path,\"/FORMIND\"))\nrunFORMIND(model,PARfile)\n\n# read Data\ndia<-read.formindData(projectName,fileTypes=\"dia\")\n\n# histogramms of the last 10% of the years of the simulation\nhistStemSizeDist(dia, log=\"y\")\nhistStemSizeDist(dia,y=\"BasalAreaPFT\" ,graphicType=\"paperC2\")\n\n# the already known plots which show a variable over time.\n\nforest<-read.formindData(projectName)\nplotSuccession(forest,y=c(\"TotalBiomass\"\n                          ,\"BiomassPerPFT\")\n               ,graphicType=\"paperC1\" )\n\n\n",
+    "created" : 1492001279507.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1260603854",
+    "id" : "BBA2EBC6",
+    "lastKnownWriteTime" : 1494236650,
+    "last_content_update" : 1494236650070,
+    "path" : "C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject/FORMINDAnalysisWithR/nextSteps.R",
+    "project_path" : "nextSteps.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

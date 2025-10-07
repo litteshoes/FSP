@@ -1,0 +1,87 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "FSP: Forest Simulation Platform"
+abstract: "An integrated web-based platform for forest ecosystem simulation and 3D visualization, combining the FORMIND ecological model with Blender-based rendering capabilities."
+authors:
+  - family-names: "FSP Development Team"
+    # Add your name here:
+    # - family-names: "Your Last Name"
+    #   given-names: "Your First Name"
+    #   orcid: "https://orcid.org/YOUR-ORCID-ID"
+repository-code: "https://github.com/litteshoes/FSP"
+url: "https://github.com/litteshoes/FSP"
+license: AGPL-3.0-or-later
+version: 1.0.0
+date-released: 2024-01-01
+keywords:
+  - forest modeling
+  - ecosystem simulation
+  - FORMIND
+  - climate change
+  - 3D visualization
+  - Blender
+  - individual-based model
+  - carbon cycling
+  - forest dynamics
+references:
+  - type: software
+    title: "FORMIND Forest Growth Model"
+    authors:
+      - name: "Helmholtz Centre for Environmental Research (UFZ)"
+    license: AGPL-3.0-or-later
+    repository-code: "https://www.ufz.de/formind/"
+  - type: article
+    title: "The effects of tree species grouping in tropical rainforest modelling"
+    authors:
+      - family-names: "Köhler"
+        given-names: "Peter"
+      - family-names: "Huth"
+        given-names: "Andreas"
+    journal: "Ecological Modelling"
+    year: 1998
+    volume: 109
+    issue: 3
+    start: 263
+    end: 274
+    doi: "10.1016/S0304-3800(98)00066-0"
+  - type: article
+    title: "Lessons learned from applying a forest gap model to understand ecosystem and carbon dynamics of complex tropical forests"
+    authors:
+      - family-names: "Fischer"
+        given-names: "Rico"
+      - family-names: "Bohn"
+        given-names: "Friedrich"
+      - family-names: "Dantas de Paula"
+        given-names: "Mateus"
+      - family-names: "Dislich"
+        given-names: "Claudia"
+      - family-names: "Groeneveld"
+        given-names: "Jürgen"
+      - family-names: "Gutiérrez"
+        given-names: "Alvaro G."
+      - family-names: "Kazmierczak"
+        given-names: "Martin"
+      - family-names: "Knapp"
+        given-names: "Nikolai"
+      - family-names: "Lehmann"
+        given-names: "Sebastian"
+      - family-names: "Paulick"
+        given-names: "Sandro"
+      - family-names: "Pütz"
+        given-names: "Sandro"
+      - family-names: "Rödig"
+        given-names: "Edna"
+      - family-names: "Roos"
+        given-names: "Katja"
+      - family-names: "Schlößer"
+        given-names: "Franziska"
+      - family-names: "Huth"
+        given-names: "Andreas"
+    journal: "Ecological Modelling"
+    year: 2016
+    volume: 326
+    start: 124
+    end: 133
+    doi: "10.1016/j.ecolmodel.2015.11.018"
+

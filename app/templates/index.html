@@ -1,0 +1,107 @@
+<!-- app/templates/index.html (v14.0 - Restore CSV Upload) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Simulation Platform - 参数配置</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-text"><h1>Forest Simulation Platform</h1><p>based on FORMIND</p></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>模拟参数配置</h2>
+        <p class="text-muted">请配置您的模拟参数，或直接使用默认值开始。可使用下方搜索框快速定位参数。</p>
+        
+        <form id="simulation-form">
+            <!-- 快速工具栏：参数搜索与说明 -->
+            <div class="form-toolbar" style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
+                <input id="param-search-input" type="text" placeholder="搜索参数名称或键 (例如 TimeEnd / N_Par.Mort_FallP)" style="flex:1 1 320px; padding:10px; border:1px solid var(--border-color); border-radius:8px; background:#fff;">
+                <span id="param-search-count" class="text-muted" style="white-space:nowrap;">已加载参数</span>
+                <!-- 密度显示控制已禁用
+                <select id="param-density-select" style="padding:10px; border:1px solid var(--border-color); border-radius:8px; background:#fff;">
+                    <option value="auto" selected>显示密度：自动</option>
+                    <option value="compact">显示密度：紧凑</option>
+                    <option value="comfortable">显示密度：舒适</option>
+                </select>
+                -->
+                <button type="button" id="param-search-clear" class="submit-btn" style="width:auto; padding:10px 14px; font-size:0.95em;">清除搜索</button>
+            </div>
+            <div class="tabs">
+                <button type="button" class="tab-button active" data-tab="par-settings">模型参数 (.par)</button>
+                <button type="button" class="tab-button" data-tab="pin-settings">初始林分 (.pin)</button>
+                <button type="button" class="tab-button" data-tab="climate-settings">气候文件</button>
+            </div>
+
+            <div class="tab-content-wrapper">
+                <div id="par-settings" class="tab-content active">
+                    <div id="par-editor-container"><div class="loader"></div></div>
+                </div>
+
+                <div id="pin-settings" class="tab-content">
+                    <fieldset>
+                        <legend>选择初始林分模式</legend>
+
+                        <!-- 模式一：默认空样地 -->
+                        <div class="form-group-row">
+                            <input type="radio" id="pin-mode-default" name="pin_mode" value="default" checked>
+                            <label for="pin-mode-default">使用默认空样地模板 (用于模拟次生演替)</label>
+                        </div>
+
+                        <!-- 模式二：从CSV上传 -->
+                        <div class="form-group-row">
+                            <input type="radio" id="pin-mode-csv" name="pin_mode" value="csv">
+                            <label for="pin-mode-csv">从CSV文件上传真实样地 (用于初始化真实林分)</label>
+                            <div id="pin-csv-area" style="display:none; margin-left: 25px; margin-top: 10px;">
+                                <input type="file" name="pin_csv_file" accept=".csv">
+                                <p class="text-muted" style="font-size: 0.8em; margin-top: 5px;">
+                                    <strong>必需列:</strong> <code>x</code>, <code>y</code> (坐标, 米), <code>dbh</code> (胸径, 米), <code>cluster</code> (PFT编号, 1-6的整数)。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 模式三：上传PIN文件 -->
+                        <div class="form-group-row">
+                            <input type="radio" id="pin-mode-upload" name="pin_mode" value="upload">
+                            <label for="pin-mode-upload">上传PIN文件</label>
+                            <div id="pin-upload-area" style="display:none; margin-left: 25px; margin-top: 10px;">
+                                <input type="file" name="pin_file" accept=".pin">
+                                <p class="text-muted" style="font-size: 0.8em; margin-top: 5px;">
+                                    上传现有的 .pin 文件来初始化林分数据。
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div id="climate-settings" class="tab-content">
+                     <fieldset>
+                        <legend>气候数据文件</legend>
+                        <div class="form-group">
+                            <p>使用默认气候数据进行模拟</p>
+                            <p class="text-muted" style="font-size: 0.9em;">系统将自动使用预设的气候数据集进行森林模拟计算。</p>
+                        </div>
+                        <input type="hidden" name="use_default_climate" value="true">
+                    </fieldset>
+                </div>
+            </div>
+            
+            <input type="hidden" name="par_params" id="par-params-json">
+            <!-- 不再需要use_default_pin_hidden，因为radio button会提交pin_mode的值 -->
+            <textarea name="pin_file_content" id="pin-content-textarea" style="display:none;"></textarea>
+
+            <!-- 提交栏：始终可达的提交按钮 -->
+            <div class="form-sticky-footer" style="background: linear-gradient(180deg, rgba(255,255,255,0.85), #fff); border-top:1px solid var(--border-color); padding: 16px 0; margin-top: 20px; backdrop-filter: blur(4px);">
+                <button type="submit" id="submit-btn" class="submit-btn">开始模拟</button>
+            </div>
+        </form>
+    </div>
+    
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

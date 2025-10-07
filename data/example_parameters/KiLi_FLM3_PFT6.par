@@ -1,0 +1,898 @@
+comment =============================================================================
+comment
+comment		Parametrization for tropical lowland forest with 6 PFTs
+comment		study site: Mt. Kilimanjaro, Tansania, Lowland, FLM3
+comment		contact: Rico Fischer
+comment		references: Fischer et al. PlosOne 2015
+comment		creation date: 14.01.2015		
+comment
+comment =============================================================================
+
+comment =============================================================================
+comment -------------------    Simulation Information	-----------------------------
+comment =============================================================================
+
+string	ProjectName	"Kilimanjaro"
+	\d project name shown in GUI
+
+float	TimeEnd	400.0
+	\u year
+	\d Ending time of the simulation
+
+float	TimeStep	1.0
+	\u year
+	\d Time step of the simulation
+
+float	OutputStep	1.0
+	\u years
+	\d Time step of the output
+
+int	RandomInit	0
+	\d Initializer for the random generator. Only important if N_Par.random_seed is false.
+	
+
+comment =============================================================================
+comment ----------------       Technical Details	-----------------------------
+comment =============================================================================
+
+float   Switch.DLYR 0.5
+    \u m
+    \r 0.1:50
+    \d Step-width of vertical height discretization of the canopy
+	
+float   Switch.Schwelle 0.1
+    \u m
+    \r 0.0:1.5
+    \d Threshold for the special result-files with the ending *.TH
+
+int Switch.MortThreshold    100
+    \u -
+    \r 0:10000
+    \d Threshold for stochastic(<100)/deterministic(>100) mortality calculation
+	
+int Switch.Ha      1
+    \u sqrt(ha)
+    \r 1:7
+    \d Square root of the number of hectares which should be simulated
+	
+string  PinFileNameX    "Kili_FLM3_empty_6pft.pin"
+    \d Name of PIN-file for the initial forest which has to be in the same folder as the par file
+
+int N_Par.StoreInitialState 1
+    \u -
+    \r 0:1
+    \d Flag for activating pre-initialization of light climate and space conditions
+
+comment =============================================================================
+comment ----------------       List of output files	    -----------------------------
+comment =============================================================================	
+
+int 	myResultFileSwitch.ats		0
+int 	myResultFileSwitch.ba		1
+int 	myResultFileSwitch.ba_th	1
+int 	myResultFileSwitch.bmpl		0
+int 	myResultFileSwitch.bt		1
+int 	myResultFileSwitch.bt_th	1
+int 	myResultFileSwitch.cflux	1
+int 	myResultFileSwitch.cfluxplot	1
+int 	myResultFileSwitch.dia		1
+int 	myResultFileSwitch.div		0
+int 	myResultFileSwitch.div_th	0
+int 	myResultFileSwitch.env		1
+int 	myResultFileSwitch.fal		0
+int 	myResultFileSwitch.fire		0
+int 	myResultFileSwitch.in		0
+int 	myResultFileSwitch.lai		0
+int 	myResultFileSwitch.lai_mean	1
+int 	myResultFileSwitch.lai_plot	0
+int	myResultFileSwitch.lai_plot_heightlayer	0
+int 	myResultFileSwitch.landslide	0
+int 	myResultFileSwitch.lidarpc	0
+int 	myResultFileSwitch.log		0
+int 	myResultFileSwitch.log_bad	0
+int 	myResultFileSwitch.log_nd	0
+int 	myResultFileSwitch.logg_end	0
+int 	myResultFileSwitch.branch	0
+int 	myResultFileSwitch.mort		1
+int 	myResultFileSwitch.n		1
+int 	myResultFileSwitch.n_th		1
+int 	myResultFileSwitch.pin		0
+int 	myResultFileSwitch.plot		1
+int 	myResultFileSwitch.prod		1
+int 	myResultFileSwitch.res		0
+int 	myResultFileSwitch.seed		0
+int 	myResultFileSwitch.seedling	0
+int 	myResultFileSwitch.stree	0
+int 	myResultFileSwitch.sv		1
+int 	myResultFileSwitch.sv_th	1
+int 	myResultFileSwitch.voxfor	0
+int 	myResultFileSwitch.water	1
+int 	myResultFileSwitch.water_plot	0
+int 	myResultFileSwitch.blender_json	0
+
+int	myResultFileSwitch.save_parameter_files	0
+int	myResultFileSwitch.result_time_stamp	0
+
+comment =============================================================================
+comment ----------------      General          --------------------------------------
+comment =============================================================================
+
+
+int	N_Par.Div_MAXGRP	6
+	\u -
+	\r 1:22
+	\d Number of simulated species groups
+
+array	N_Par.Div_COMMERCIAL_A
+	\u -
+	\r 0:1
+	\d Commercial type (group-specific) for logging (0: not commercial; 0-1: partly commercial; 1: commercial)
+	typeOfArray	float
+	dimension	6
+data
+	1	1	1	1	1	1
+end
+
+float	N_Par.Div_DiaClassWidth	0.1
+	\u m
+	\r 0.001 - 2.0
+	\d Constant width of each diameter class of the stem size distribution (for output of *.dia)
+
+
+comment =============================================================================
+comment ----------------      Flags            --------------------------------------
+comment =============================================================================
+
+int	N_Par.random_seed_ON	0
+	\u -
+	\r 0:1
+	\d Flag for activating stochasticity (0: reproducible / 1: NOT reproducible)
+
+int	N_Par.Closed_boundary	1
+	\u -
+	\r 0:1
+	\d Flag for handling of events at the border of a hectare (0: what goes out at the border, is lost / 1: what goes out at the border, comes back in on the other side)
+
+int	N_Par.Globalseeds	1
+	\u -
+	\r 0:1
+	\d Flag for using global seed ingrowth from outside a hectare
+	
+int	N_Par.Seedtree	0
+	\u -
+	\r 0:1
+	\d Flag for activating seed ingrowth by simulated mother trees
+
+int	N_Par.Puls	0
+	\u -
+	\r 0:1
+	\d Flag for activating pulsed ingrowth of accumulated seeds
+
+int	N_Par.Densityreg	0
+ 	\u -
+ 	\r 0:1
+ 	\d Flag for activating the density regulation of establishing seedlings
+
+int	N_Par.Spacelimitation	1
+	\u -
+	\r 0:1
+	\d Flag for activating self-thinning in crowded stand
+
+int	N_Par.Treefall	1
+	\u -
+	\r 0:1
+	\d Flag for deactivating falling of dying trees
+
+int	N_Par.Nogrow	0
+	\u -
+	\r 0:1
+	\d Flag for deactivating biomass growth of trees
+
+int	N_Par.Fragmentation	0
+	\u -
+	\r 0:1
+	\d Flag for activating increased mortality at the edge area of fragmented forest areas
+
+int	N_Par.Frag_highmortbigtree	0
+	\u -
+	\r 0:1
+	\d Flag for activating increased mortality for trees with stem diameter > 0.6 m 
+
+int	N_Par.Frag_lowseed	0
+	\u -
+	\r 0:1
+	\d Flag for activating reduced seed ingrowth by simulated mother trees 
+	
+int	Log.DoIt    0
+	\r 0:1	
+	\d Logging yes/no
+	
+int	N_Par.Fire	0
+	\u -
+	\r 0:1
+	\d Flag for activating the fire submodule
+	
+comment =============================================================================
+comment ----------------       Environment     --------------------------------------
+comment =============================================================================
+
+array	N_Par.Env_IS_2
+	\u mikromol(photons)/(m^2*s) (PAR)
+	\r 0:2200
+	\d Mean light intensity above canopy during photosynthetic active period (27.75 & 30 mol/(d m2), Schlensog 97)
+	typeOfArray	float
+	dimension	2
+data
+	860.0	860.0
+end
+
+array   N_Par.Div_K
+        \u -
+        \r 0:1
+        \d Light extinction coefficient of leaves (group-specific)
+        typeOfArray  float
+        dimension    6
+data
+	0.7	0.7	0.7	0.7	0.7	0.7
+end
+
+
+array	N_Par.Env_DayL_2
+	\u h
+	\r 0:24
+	\d Length of daily photosynthetic active period
+	typeOfArray	float
+	dimension	2
+data
+	12.0	12.0
+end
+
+array	N_Par.Env_SeaL_2
+	\u -
+	\r 0:1
+	\d Relative length of seasons (wetseason/dryseason)
+	typeOfArray	float
+	dimension	2
+	data
+	1.0	0.0
+end
+
+
+comment =============================================================================
+comment ----------------         Establishment        -------------------------------
+comment =============================================================================
+
+
+array	N_Par.Est_NS_3
+	\u 1/(ha*a)
+	\r 0:20000
+	\d Number of seedlings per year and hectare for different pfts
+	typeOfArray	int
+	dimension	6
+data
+	30	156	21	300	2	200
+end
+
+array	N_Par.Est_ISeed_3
+	\u -
+	\r 0:1
+	\d Relative minimum light intensity for establishment for diff. growth groups (resp. light groups)
+	typeOfArray	float
+	dimension	6
+data
+	0.03	0.01	0.05	0.20	0.03	0.20
+end
+
+array	N_Par.Est_SeedMort_3
+	\u 1/(year)
+	\r 0:1
+	\d Mortality rate of seeds in seedpool for diff. lgrp
+	typeOfArray	float
+	dimension	6
+data
+	0	0	0	0	0	0
+end
+
+float	N_Par.Est_DS	0.02
+	\u m
+	\r 0:0.1
+	\d Diameter of Seedlings at establishment
+
+comment =============================================================================
+comment ----------------       Mortality         ------------------------------------
+comment =============================================================================
+
+array   N_Par.Mort_FUNCTION_2
+	\u -
+	\r 0:5
+	\d Array showing the use functions for (f(D), f(dinc)) in the model
+	typeOfArray     int
+	dimension 2
+data
+	1	1
+end
+comment f(D)   : 0(2nd order polynom) 1(a0: maxmort, a1 maxborder)
+comment f(dinc): 0(2nd order polynom) 1(Exponential b0*e^b1*dinc) 2(Swaine 0.02 + b0 * dinc + b1 * dinc^2 + b2 * dinc^3)
+
+array	N_Par.Mort_mean_19
+	\u 1/a
+	\r 0:1
+	\d Specific mean mortality rate for different pfts
+	typeOfArray	float
+	dimension	6
+data
+	0.015	0.030	0.029	0.040	0.021	0.045
+end
+
+array	N_Par.Mort_Dia_31
+	\u 1/a
+	\r 0:1
+	\d Specific mortality rate as function of diameter
+	typeOfArray	float
+	dimension	3 6
+data
+	0.00	0.00	0.00	0.00	0.00	0.00
+	0.00	0.00	0.00	0.00	0.00	0.00
+	0.00	0.00	0.00	0.00	0.00	0.00	
+end
+
+array	N_Par.Mort_Dinc_31
+	\u 1/a
+	\r 0:1
+	\d Specific mortality rate as function of diameter increment
+	typeOfArray	float
+	dimension	3 1
+data
+ 	0
+	0
+	0
+end
+
+float	N_Par.Mort_FallP	0.4
+	\u -
+	\r 0:1
+	\d Probability of dying trees (d>10cm) to fall |old: 0.4
+
+	
+comment =============================================================================
+comment ----------------       geometry                       -----------------------
+comment =============================================================================
+
+array   N_Par.Geo_FUNCTION_7
+	\u -
+	\r 0:5
+      \d Array showing use functions (HD LD CD FD CLFH TR HMmean Bio LAI) in model
+	typeOfArray     int
+	dimension 9
+data
+	2	0	8	1	2	1	0	0	0
+end
+comment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))
+comment XX   : unused
+comment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2+a2*d^3) 4((a0+a1*d^a2)*d) 5: cd0*d + cd1*exp(-cd2*d); 6: cd0 * d + cd1; 7: cd0 * d / (1 + cd0 * cd1 * d); 8: cd0 * pow(d,cd1) - cd2
+comment FD   : 0(f=f0*exp(f1*d^f2)  1:f=f0*d^f1
+comment CLFH : 0(clf = -h0*h1*h/(h0*h+h1)+h2) 1(2nd order polynom) 2(clf = h0)
+comment TR   : 0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)
+comment HMmean: 0(mean maximum HEIGHT) 1(mean maximum DIAMETER)
+comment Bio2DBH :	0 old calculation based on FoutofD and HoutofD	1 b=b0*d^b1 	 2: : b1*(d-b3)*(2*b2+(d-b3))/(b2 +(d-b3)) 
+comment LAI: 0(powerlaw l0 * pow(d, l1)) 1(linear l0 + l1 * (d / 100))
+
+array   N_Par.Geo_HMmean_5
+	\u m
+	\r 0:80
+	\d Mean maximum potential height for different pft
+	typeOfArray     float
+	dimension	6
+data
+	56 33.0 33.0 28.0 16.0 16.0
+end
+
+array   N_Par.Geo_HD_39
+	\u divers
+	\r 0:10
+	\d Parameter of height-to-diameter-curves for different hgrp
+	typeOfArray     float
+	dimension	3	6
+data
+	45.276603878974611916419235058129	30.656175987552447992356974282302  36.563439116406655671198677737266 30.933415495202073230984751717187	20.820409016034769678071825182997	47.546795773833395060137263499200
+	0.57  0.41  0.44  0.43  0.34  0.6
+	0.00	0.00	0.00	0.00	0.00	0.00
+end
+
+array   N_Par.Geo_LAIT_21
+	\u divers
+	\r 0:10
+	\d Parameter of leafarea index for single tree as function of diameter-curves
+	typeOfArray     float
+	dimension	3 6
+data
+	3.169786384922227195914956610068	3.169786384922227195914956610068	3.169786384922227195914956610068	3.169786384922227195914956610068	3.169786384922227195914956610068	3.169786384922227195914956610068
+	0.1	0.1	0.1	0.1	0.1	0.1
+	0.0	0.0	0.0	0.0	0.0	0.0
+end
+
+array   N_Par.Geo_CD_31
+	\u DBH[cm],CD[m]
+	\r 0:10
+	\d Parameters of crown diameter as function of diameter-curves
+	typeOfArray     float
+	dimension	3 6
+data
+	13.745205916606639817700852290727	13.745205916606639817700852290727	13.745205916606639817700852290727	13.745205916606639817700852290727	13.745205916606639817700852290727	13.745205916606639817700852290727
+	0.68	0.68	0.68	0.68	0.68	0.68
+	0.00	0.00	0.00	0.00	0.00	0.00
+end
+
+array   N_Par.Geo_FD_31
+	\u divers
+	\r 0:10
+	\d Parameters of form factor as function of diameter-curves
+	typeOfArray     float
+	dimension	3 6
+data
+	0.336117190824927802861310510707	0.336117190824927802861310510707	0.336117190824927802861310510707	0.336117190824927802861310510707	0.336117190824927802861310510707	0.336117190824927802861310510707
+	-0.18	-0.18	-0.18	-0.18	-0.18	-0.18
+	0.00	0.00	0.00	0.00	0.00	0.00
+end
+
+array   N_Par.Geo_CLFH_31
+	\u divers
+	\r 0:10
+	\d Parameters of crown length factor as function of height-curves
+	typeOfArray     float
+	dimension	3 1
+data
+	0.3	0.3	0.3	0.3	0.3	0.3
+	0.0	0.0	0.0	0.0	0.0	0.0
+	0.0	0.0	0.0	0.0	0.0	0.0
+end
+
+array   N_Par.Geo_TR_21
+	\u divers
+	\r 0:1
+	\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)
+	typeOfArray     float
+	dimension	2 1
+data
+	0.7
+	0
+end
+
+float	N_Par.Geo_RB	0.0
+	\u -
+	\r 0:1
+	\d Fraction of root biomass to stem biomass
+
+float	N_Par.Geo_RH	0.0
+	\u -
+	\r 0:1
+	\d height of root [m]
+
+comment =============================================================================
+comment ----------------            production                   --------------------
+comment =============================================================================
+
+array	N_Par.Pro_Pmax_3
+	\u mikromol(CO_2)/(m^2*s)
+	\r 1:50
+	\d Maximum photoproducitvity for different growth groups (frueher lgrp)
+	typeOfArray	float
+	dimension	6
+data
+	2.0	3.1	6.8	11.0	7.0	12.0
+end
+
+array	N_Par.Pro_Alpha_3
+	\u mikromol(CO_2)/mikromol(photons)
+	\r 0:1
+	\d Slope of light response curve for different growth groups (frueher lgrp)
+	typeOfArray	float
+	dimension	6
+data
+	0.36	0.28	0.23	0.20	0.30	0.20 
+end
+
+float	N_Par.Pro_GLoss	0.25
+	\u -
+	\r 0:1
+	\d GrowthRespirationFactor
+
+string N_Par.Growth_Function_Switch "chanter_maxPos"
+	\u -
+	\r "polynom","weibull","richards","chanter","chanter_maxPos"
+	\d function for calculating maximal dbh-growth
+comment rico: chanter_maxPos - Maximum angeben (growth_max&growth_maxpoint) -> Parameter werden intern berechnet
+comment rico: chanter - direkt parameter angeben (dbh_growth)
+
+array	N_Par.Pro_dbh_growth
+	\u -
+	\r 0:1
+	\d parameters for maximal dbh-growth function for different pfts
+	typeOfArray	float
+	dimension	4 6
+data
+	0	0	0	0	0	0	
+	0	0	0	0	0	0
+	0	0	0	0	0	0	
+	0	0	0	0	0	0
+end
+
+comment rico: if polynom: the following parameters are needed to determine the maximal growth curve, which is calculated in the function CalculateGrowthCurves
+array	N_Par.Pro_dbh_growth_max
+	\u m
+	\r 0:1
+	\d maximum potential dbh_growth for each growth group
+	typeOfArray	float
+	dimension	6
+data
+	0.012	0.012	0.019	0.029	0.011	0.029	
+end
+
+comment rico: if polynom: the following parameters are needed to determine the maximal growth curve, which is calculated in the function CalculateGrowthCurves
+array	N_Par.Pro_dbh_growth_start
+	\u -
+	\r 0:1
+	\d which fraction of maximum potential dbh_growth can be realized for the smallest trees
+	typeOfArray	float
+	dimension	6
+data
+	0	0	0	0	0	0	
+end
+
+comment rico: if polynom: the following parameters are needed to determine the maximal growth curve, which is calculated in the function CalculateGrowthCurves
+array	N_Par.Pro_dbh_growth_end
+	\u -
+	\r 0:1
+	\d which fraction of maximum potential dbh_growth can be realized when trees reach the maximal dbh
+	typeOfArray	float
+	dimension	6
+data
+	0	0	0	0	0	0	
+end
+
+comment rico: if polynom: the following parameters are needed to determine the maximal growth curve, which is calculated in the function CalculateGrowthCurves
+array	N_Par.Pro_dbh_growth_maxpoint
+	\u -
+	\r 0:1
+	\d where do trees reach their maximum potential dbh_growth; fraction of max_dbh
+	typeOfArray	float
+	dimension	6
+data
+	0.33	0.34	0.23	0.60	0.33	0.60
+end
+
+array	N_Par.Pro_Rho_3
+	\u t(odm)/m^3
+	\r 0:2
+	\d Wood density for different pfts  (frueher lgrp)
+	typeOfArray	float
+	dimension	6
+data
+	0.55	0.54	0.41	0.40	0.52	0.47
+end
+
+float	N_Par.Pro_M	0.1
+	\u -
+	\r 0:1
+	\d Transmission coefficient of leaves
+	
+float	N_Par.Pro_RD	0.0
+	\u -
+	\r 0:1
+	\d root density
+
+float	N_Par.Pro_RCON	0.0
+	\u -
+	\r 0:1
+	\d conversion factor from root volume[m^3 root/m^2 soilsurface] to root cohesion [kPa]
+	
+comment =============================================================================
+comment ----------------      Fire Module      --------------------------------------
+comment =============================================================================
+
+
+comment rico: fire module
+float	N_Par.Fire_Lambda	25
+	\u [yrs]
+	\r 0:1000
+	\d fire module: mean time between fire occurs
+
+comment rico: fire module
+float	N_Par.Fire_Beta		0.50
+	\u [1/ha]
+	\r 0:1
+	\d fire module: mean fire size
+
+comment rico: fire module
+float	N_Par.Fire_Sev		0.55
+	\u [-]
+	\r 0:1
+	\d fire module: severity of a fire event. 0.1=low;1.0=strong;
+
+comment rico: fire module
+float	N_Par.Fire_exmoisture	0.40
+	\u [-]
+	\r 0:1
+	\d fire module: moisture of extinction. fire is considered to be absent when soil water exceeds m_e
+
+comment rico: fire module
+float	N_Par.Fire_minFuelLoad	0.25
+	\u [t/plot]
+	\r 0:100
+	\d fire module: Below this biomass threshold fire is not permitted on this plot. 
+
+comment rico: fire module
+array	N_Par.Fire_Tolerance
+	\u -
+	\r 0:4
+	\d fire tolerance for each PFT = propability for Death 1-no tolerance ... 4-tolerant against fire
+	typeOfArray	int
+	dimension	6
+data
+	2	1	1	4	2	2	
+end
+
+comment =============================================================================
+comment ----------------      Climate          --------------------------------------
+comment =============================================================================
+
+array	N_Par.Climate
+	\u -
+	\r 0:1
+	\d flag for using advanced climate, [Water Temperature Irradiance Daylength Veg_Periode]
+	typeOfArray	int
+	dimension	6
+data 
+	0	0	0	0	0	0
+end
+comment: with climate 1	1	1	0	0
+
+array	N_Par.Climate_File	
+	\d File name and relative path (to the *.par) of daily climate data 
+	\d irradiance, air temperature, day-length, potential evapotranspiration, and CO2
+	\d if dimension is 1, file is used for all patches
+	\d if dimension > 1, patch heterogeneities has to be activated for a proper use of all files
+	\i 0 
+	typeOfArray	string
+	dimension	1
+data 
+	KiLi.climate.txt	
+end
+
+comment =============================================================================
+comment ----------------      Temperature      --------------------------------------
+comment ============================================================================
+
+string N_Par.Temperature_Reduction_Algorithm "gutierrez"
+	\u -
+	\r "norm_4","gutierrez"
+	\d algorithm for the temperature curve 
+
+comment +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+comment +++++ N_Par.Temperature_Reduction_Algorithm = "gutierrez" +++++
+float	N_Par.temp_co2low	-2.0
+	\u �C
+	\r -10:10
+	\d Minimum temperature for photosynthesis 
+
+float	N_Par.temp_co2high	38.0
+	\u �C
+	\r 0:45
+	\d Maximum temperature for photosynthesis 
+
+array	N_Par.Temperature_month_hot
+	\u �C
+	\r 0:20000
+	\d Mean temperature of the warmest month   
+	typeOfArray	float
+	dimension	6
+data
+	21.0	21.0	21.0	21.0	21.0	21.0	
+end
+
+array	N_Par.Temperature_month_cold
+	\u �C
+	\r 0:20000
+	\d Mean temperature of the coldest month
+	typeOfArray	float
+	dimension	6
+data
+	12.0	12.0	12.0	12.0	12.0	12.0
+end
+
+comment +++++++++++++++++++++++++++++++++
+comment +++++ respiration reduction +++++
+
+float	N_Par.Temperature_Q10	2.3
+	\u �C
+	\r 0:1
+	\d Short-term respiration response to temperature
+
+float	N_Par.Temperature_reference	17.3
+	\u �C
+	\r 0:1
+	\d Reference temperature
+	
+comment =============================================================================
+comment ----------------      reference climate for maint. respiration      ---------
+comment =============================================================================
+
+array	N_Par.ref_length_of_vegetation_periode 
+	\u []
+	\r 0:1 for using day length in climate file
+	\d percent of total year which could be vegetation periode
+	typeOfArray	float
+	dimension	6
+data
+	1.0	1.0	1.0	1.0	1.0	1.0
+end
+
+array N_Par.ref_Irradiance 
+	\u [m�mol photon/sec m�]
+	\r 0:1500
+	\d ref irradiance in every time step
+	typeOfArray	float
+	dimension	6
+data
+	860	860	860	860	860	860
+end
+
+array	N_Par.ref_environment_reduction 
+	\u []
+	\r 0:1
+	\d reference reduction  because of temperature
+	typeOfArray	float
+	dimension	6
+data
+	0.965	0.965	0.965	0.965	0.965	0.965
+end
+
+comment =============================================================================
+comment ----------------      Soilwater        --------------------------------------
+comment =============================================================================
+
+array   N_Par.Water_WUE
+        \u g (odm)/kg (H2O)
+        \r 0:999999
+        \d Water-use-efficiency-coefficient (group-specific)
+        typeOfArray  float
+        dimension    6
+data 
+	2.0	2.0	2.0	2.0	2.0	2.0
+end
+
+array	N_Par.Water_PWP
+	\u Volume percent
+	\r 0:100
+	\d Permanent wilting point
+	\i 0 	
+	typeOfArray	float
+	dimension	1
+data 
+	26.0
+end
+
+array	N_Par.Water_FC
+	\u Volume percent
+	\r 0:100
+	\d Field capacity 
+	\i 0 
+	typeOfArray	float
+	dimension	1
+data 
+	43.0
+end
+
+float N_Par.Water_KL 0.2
+	\u [mm/d]
+	\r 0:20
+	\d interception constant Dickinson 1984
+
+float N_Par.Water_POR 46.0
+	\u [V]
+	\r 0:100
+	\d porosity of soil (Maidment 1993 Handbook of hydrology. Table 5.5.5) 
+comment Loam: 46.3 +- 9
+
+float N_Par.Water_KS 0.000000177
+	\u [m/s]
+	\r 0:1
+	\d fully saturated conductivity (Maidment 1993 Handbook of hydrology. Table 5.5.5) 
+comment loam : 0.00000366
+
+float N_Par.Water_L 0.165
+	\u []
+	\r 0:1
+	\d pore size distribution index (Maidment 1993 Handbook of hydrology Table 5.3.2) 
+comment loam 0.252 +- 0.166
+
+float N_Par.Water_SW_RES 9.0
+	\u [V]
+	\r 0:100
+	\d residual water content in soil (Maidment 1993 Handbook of hydrology. Table 5.3.2) 
+comment loam 2.7 +-4.7
+
+float N_Par.Water_SD 2.5
+	\u [m]
+	\r 0:100
+	\d soil depth [m] 
+
+float N_Par.Water_RainfallDuration 12
+	\u [h]
+	\r 1:24
+	\d mean rainfall duration on a rainy day. Default is 24 hours.
+
+float N_Par.Water_SoilLayer 1
+
+float N_Par.Water_LayerDepth 2.5
+
+	
+comment =============================================================================
+comment ----------------      Logging Module      --------------------------------------
+comment =============================================================================
+
+int	Log.No_HarvestDamage	1
+	\u -
+	\r 0:1
+	\d no damage for potential harvestable trees (0 with damages, 1 without damages)
+	
+int	Log.Falling_DamagedPlots	1
+	\u -
+	\r 0:1
+	\d looks for already damaged plots (0 with damages, 1 without damages)	
+
+	
+float   Log.Time    590.0
+    \u year
+	\r 0:999999
+    \d Year for first logging operation  --> Andreas
+
+float   Log.Diameter    0.8
+    \u m
+    \r 0.0:1.5
+    \d Cutting threshold  --> Andreas
+	
+float	Log.Cycle   1000.0
+    \u year
+	\r 0:999999
+    \d Logging cycle  --> Andreas
+	
+int Log.Min 0
+    \u per hectare
+    \r 0:30
+    \d Minimum number of extracting trees per cycle and hectar  --> Andreas
+	
+int Log.Max 10000
+    \u per hectare
+    \r 0:60
+    \d Maximum number of extracting trees per cycle and hectar  --> Andreas
+	
+int Log.Rest 0
+    \u per hectare
+    \r 0:60
+    \d Number of remaining trees per cycle and hectar  --> Andreas
+	
+int Log.DamLinear   0
+	\u -
+    \r 0:999999
+    \d Code for afterlogging effects  --> Andreas
+	
+array   Log.Dam1
+    \u -
+    \r 0:1
+    \d Conventionel Logging: Damage in corresponding DamDia class for StrategyN 1 3 5 7  --> Andreas
+    typeOfArray float
+    dimension   4
+data
+    0.10    0.10    0.01    0.01
+end
+
+array   Log.DamDia
+    \u m
+    \r 0:1.5
+    \d upper thresholds of diameter classes for logging damages  --> Andreas
+    typeOfArray float
+    dimension   4
+data
+    0.20   0.35   0.50	2.5
+end

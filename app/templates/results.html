@@ -1,0 +1,225 @@
+<!-- app/templates/results.html (FORMIND主题 v2.0) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Simulation Project - 结果可视化</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body { display: flex; flex-direction: column; min-height: 100vh; overflow-y: auto; padding-bottom: 76px; }
+        .header { flex-shrink: 0; }
+        .main-content { flex: 1 1 auto; min-height: 0; display: flex; position: relative; overflow: hidden; }
+        #scene-container { flex: 1 1 auto; min-height: 0; position: relative; display: flex; justify-content: center; align-items: center; }
+        #scene-container > canvas { display: block; width: 100%; height: 100%; }
+        #scene-container .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        .overlay-panel {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            color: var(--text-color);
+        }
+        /* 标题不换行，副标题小字号 */
+        .logo-text h1 { white-space: nowrap; }
+        .logo-text p { font-size: 0.8em; white-space: nowrap; }
+        #info-panel { top: 20px; left: 20px; padding: 20px; max-width: 350px; }
+        #info-panel h2 { font-size: 1.2em; margin: 0 0 10px 0; color: var(--header-bg); }
+        #info-panel p { font-size: 0.9em; margin: 0 0 10px 0; color: var(--text-muted); }
+        
+        .ssp-button { display: block; background: var(--input-bg); border: 1px solid var(--border-color); color: var(--text-color); padding: 10px; border-radius: 5px; cursor: pointer; font-size: 1em; text-align: left; margin-bottom: 10px; transition: all 0.2s ease; }
+        .ssp-button.active, .ssp-button:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+        #stats-content { flex-grow: 1; overflow-y: auto; }
+        #charts-grid { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 20px; }
+        @media (min-width: 900px) { #charts-grid { grid-template-columns: 1fr 1fr; } }
+        .chart-card { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; }
+        .chart-card h3 { margin: 0 0 8px 0; font-size: 1em; color: var(--header-bg); }
+        .chart-card canvas { width: 100% !important; height: 260px !important; display: block; }
+        /* 全屏统计视图：改为网格布局，左侧情景选择不再悬浮 */
+        #stats-fullpage {
+            position: absolute; inset: 0; display: none; background: #f8fafc;
+            /* 当显示时（JS 设置 display:grid），两列布局：左侧情景栏 + 右侧图表区 */
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: auto 1fr;
+            column-gap: 16px;
+        }
+        #floating-ssp {
+            position: static; width: 180px; z-index: 1;
+            background: transparent; border: none;
+            border-radius: 0; padding: 12px; box-shadow: none;
+            grid-column: 1; grid-row: 1 / span 2; margin: 20px; align-self: start;
+        }
+        #floating-ssp h2 { font-size: 1em; margin: 0 0 8px 0; color: var(--header-bg); }
+        #stats-toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: 12px; align-items: center; padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--border-color); grid-column: 2; }
+        /* 优化3D背景 */
+        #scene-container {
+            position: relative;
+        }
+
+        #controls-container {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: #fff; padding: 15px 20px;
+            box-sizing: border-box; display: flex !important; align-items: center; gap: 20px;
+            border-top: 1px solid var(--border-color);
+            z-index: 100;
+        }
+
+        /* 统计分析界面时隐藏底部控件 */
+        #stats-fullpage.active ~ #controls-container {
+            display: none !important;
+        }
+        #year-display { font-size: 1.5em; font-weight: bold; color: var(--header-bg); }
+
+        /* 性能显示面板 - 默认隐藏，仅用于开发者工具调试 */
+        .performance-panel {
+            position: fixed; top: 10px; right: 10px; z-index: 1000;
+            background: rgba(0, 0, 0, 0.8); color: white; padding: 10px;
+            border-radius: 5px; font-family: monospace; font-size: 12px;
+            max-width: 200px;
+            display: none !important; /* 默认隐藏，仅用于开发者工具调试 */
+        }
+        .performance-panel div { margin: 2px 0; }
+
+        /* 统计分析界面时隐藏性能面板 */
+        #stats-fullpage.active ~ .performance-panel {
+            display: none !important;
+        }
+    </style>
+</head>
+<body data-job-id="{{ job_id }}">
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1>Forest Simulation Platform</h1>
+                <p>based on FORMIND</p>
+            </div>
+        </div>
+        <nav id="view-tabs" style="display:flex; gap:10px; padding:10px 20px;">
+            <button id="tab-model" class="ssp-button active">模型预览</button>
+            <button id="tab-stats" class="ssp-button">统计分析</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div id="scene-container">
+            <div class="loader"></div>
+        </div>
+
+        <div id="info-panel" class="overlay-panel">
+            <h2>不同气候下森林样地演化模拟</h2>
+            <p>任务ID: {{ job_id }}</p>
+            <p>使用时间轴或播放按钮探索演化过程；可切换至模型或统计分析。</p>
+        </div>
+        
+        <!-- 全屏统计视图 -->
+        <div id="stats-fullpage">
+            <div id="floating-ssp">
+                <h2>选择情景</h2>
+                <button class="ssp-button" data-ssp="ssp126">SSP 1-2.6</button>
+                <button class="ssp-button active" data-ssp="ssp245">SSP 2-4.5</button>
+                <button class="ssp-button" data-ssp="ssp585">SSP 5-8.5</button>
+            </div>
+            <div id="stats-toolbar">
+                <div style="display:flex;gap:16px;align-items:center;">
+                    <label style="display:flex;gap:6px;align-items:center;">图例 <input type="checkbox" id="toggle-legend" checked></label>
+                    <div id="mode-switch" style="display:flex;gap:10px;align-items:center;">
+                        <span class="text-muted">模式</span>
+                        <label style="display:flex;gap:6px;align-items:center;"><input type="radio" name="stats_mode" id="mode-scenario" value="scenario" checked>按情景</label>
+                        <label style="display:flex;gap:6px;align-items:center;"><input type="radio" name="stats_mode" id="mode-compare" value="compare">对比分析</label>
+                    </div>
+                    <button id="btn-export-charts" class="btn">导出图表</button>
+                </div>
+            </div>
+            <div id="stats-content" style="height: calc(100% - 56px);">
+                <div id="charts-grid">
+                    <div class="chart-card"><h3>胸高断面积（按PFT）</h3><canvas id="chart-basal-area"></canvas></div>
+                    <div class="chart-card"><h3>生物量（按PFT）</h3><canvas id="chart-biomass"></canvas></div>
+                    <div class="chart-card"><h3>胸高木杆数（按PFT）</h3><canvas id="chart-stems"></canvas></div>
+                    <div class="chart-card"><h3>碳通量：NEE / GPP / Biomass C</h3><canvas id="chart-cflux"></canvas></div>
+                    <div class="chart-card"><h3>GPP（按PFT比例近似分摊）</h3><canvas id="chart-gpp-pft"></canvas></div>
+                    <div class="chart-card"><h3>派生：NPP 与 CUE</h3><canvas id="chart-npp-cue"></canvas></div>
+                    <div class="chart-card"><h3>NPP（按PFT比例近似分摊）</h3><canvas id="chart-npp-pft"></canvas></div>
+                    <div class="chart-card"><h3>累计 NEP（越高代表累计碳汇越大）</h3><canvas id="chart-cum-nep"></canvas></div>
+                    <div class="chart-card"><h3>碳库变化（Δ 生物量/枯立木/土壤 快/慢）</h3><canvas id="chart-delta-pools"></canvas></div>
+                    <div class="chart-card"><h3>生物量周转时间 τ（年）</h3><canvas id="chart-tau"></canvas></div>
+                    <div class="chart-card"><h3>径级分布（起始 vs 结束年）</h3><canvas id="chart-dia"></canvas></div>
+                    <div class="chart-card"><h3>月度GPP分布模拟（年内动态）</h3><canvas id="chart-monthly-gpp"></canvas></div>
+                </div>
+                <div id="compare-grid" style="display:none; padding:20px;">
+                    <div class="chart-card"><h3>三情景对比：总生物量</h3><canvas id="cmp-biomass"></canvas></div>
+                    <div class="chart-card"><h3>相对变化（相对SSP1-2.6）</h3><canvas id="cmp-delta"></canvas></div>
+                    <div class="chart-card"><h3>三情景对比：NEE（碳汇为负）</h3><canvas id="cmp-nee"></canvas></div>
+                    <div class="chart-card"><h3>三情景对比：GPP</h3><canvas id="cmp-gpp"></canvas></div>
+                    <div class="chart-card"><h3>三情景对比：NPP</h3><canvas id="cmp-npp"></canvas></div>
+                    <div class="chart-card"><h3>PFT组成对比（起始与结束年份）</h3><canvas id="cmp-pft-bars"></canvas></div>
+                    <div class="chart-card"><h3>三情景对比：末年径级分布</h3><canvas id="cmp-dia"></canvas></div>
+                    <div class="chart-card"><h3>三情景对比：累计 NEP</h3><canvas id="cmp-cum-nep"></canvas></div>
+                    <div class="chart-card"><h3>终点差异：总生物量与累计 NEP（相对SSP1-2.6）</h3><canvas id="cmp-end-bars"></canvas></div>
+                    <div class="chart-card"><h3>天气/气候对比（概览列均值）</h3><canvas id="cmp-climate"></canvas></div>
+                    <div class="chart-card">
+                        <h3>气候时间序列对比（选择变量）</h3>
+                        <div style="margin:8px 0;">
+                            <label style="display:block; margin-bottom:4px;">变量
+                                <select id="cmp-climate-select" style="width:100%; padding:6px; border:1px solid var(--border-color); border-radius:4px; background:#fff;">
+                                    <option value="temperature_mean_C">气温年均 (°C)</option>
+                                    <option value="rain_sum_mm">降雨年累计 (mm)</option>
+                                    <option value="irradiance_mean_umol">辐照年均 (μmol/s/m²)</option>
+                                    <option value="day_length_mean_h">日照时长年均 (h)</option>
+                                    <option value="pet_sum_mm">PET年累计 (mm)</option>
+                                    <option value="co2_mean_ppm">CO₂年均 (ppm)</option>
+                                </select>
+                            </label>
+                        </div>
+                        <canvas id="cmp-climate-ts"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>气候复合图（单情景，标准化Z分数）</h3>
+                        <p class="text-muted" style="margin:4px 0 8px 0;">当前按左侧选择的情景绘制六个气候变量（Z分数标准化）</p>
+                        <canvas id="cmp-climate-composite"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="controls-container">
+            <div class="controls-left">
+                <button id="btn-first" class="btn">⏮ 上一年</button>
+                <button id="btn-play" class="btn">▶ 播放</button>
+                <button id="btn-last" class="btn">⏭ 下一年</button>
+                <span id="year-display">年份: 0</span>
+                <input type="range" id="timeline-slider" class="slider" min="0" max="0" value="0" disabled>
+            </div>
+            <div class="controls-right">
+
+                <label>图例 <input type="checkbox" id="toggle-legend" checked></label>
+                <button id="btn-clear-cache" class="btn" title="清除模型缓存">🗑️ 清除缓存</button>
+                <button id="btn-export-charts" class="btn">导出图表</button>
+            </div>
+        </div>
+
+        <!-- 性能显示面板 -->
+        <div class="performance-panel" id="performance-panel" style="display:none;">
+            <div id="perf-load-time">平均加载: 0ms</div>
+            <div id="perf-cache-rate">缓存命中: 0%</div>
+            <div id="perf-cache-hits">缓存命中: 0</div>
+            <div id="perf-cache-misses">缓存未命中: 0</div>
+            <div id="perf-current-lod">当前LOD: 高质量</div>
+            <div id="perf-preload-status">预加载: 空闲</div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.164.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/" } }</script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

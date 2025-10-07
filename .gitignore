@@ -1,0 +1,221 @@
+# FSP Project .gitignore
+
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# ===========================
+# IDEs and Editors
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ===========================
+# Project Reports and Internal Docs
+# ===========================
+PROJECT_STATUS_REPORT.md
+CLEANUP_SUMMARY.md
+RESET_REPOSITORY_GUIDE.md
+*_工作流文档.md
+GITHUB_UPLOAD_GUIDE.md
+CLEAR_LFS_GUIDE.md
+upload-to-github.sh
+reset-repository.sh
+test-*.sh
+offline-test/
+
+# ===========================
+# Flask
+# ===========================
+instance/
+.webassets-cache
+.flask_session/
+flask_session/
+
+# ===========================
+# Celery
+# ===========================
+celerybeat-schedule
+celerybeat.pid
+
+# ===========================
+# Docker
+# ===========================
+.dockerignore
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ===========================
+# Logs
+# ===========================
+logs/*.log
+*.log
+logs/
+!logs/.gitkeep
+
+# ===========================
+# Data and Results
+# ===========================
+data/scenarios/
+data/simulation_results/
+data/climate/*
+!data/climate/.gitkeep
+data/*.csv
+data/*.txt
+data/*.par
+data/*.pin
+!data/.gitkeep
+
+# Static generated files
+*.glb
+*.gltf
+app/static/models/
+app/static/videos/*.mp4
+app/static/models/*
+app/static/videos/*
+!app/static/models/.gitkeep
+!app/static/videos/.gitkeep
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+tmp/
+temp/
+*.cache
+
+# ===========================
+# Blender
+# ===========================
+# Blender temporary files
+*.blend1
+*.blend2
+
+# Blender - entire directory ignored, will be installed via Dockerfile
+tools/blender/
+!tools/blender/.gitkeep
+
+# ===========================
+# FORMIND
+# ===========================
+# FORMIND binary (built during Docker image creation)
+tools/formind/bin/formind
+!tools/formind/bin/.gitkeep
+
+# FORMIND output files
+tools/formind/Formind_Model/output/
+tools/formind/Formind_Model/result/
+*.out
+*.res
+
+# ===========================
+# Backup Files
+# ===========================
+*_backup.*
+*copy.*
+*_old.*
+*.bak
+
+# ===========================
+# OS Generated
+# ===========================
+Thumbs.db
+Desktop.ini
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# ===========================
+# Git LFS
+# ===========================
+# Only track necessary large files via .gitattributes
+# Exclude everything else
+
+# ===========================
+# Documentation Build
+# ===========================
+docs/_build/
+docs/.doctrees/
+site/
+
+# ===========================
+# Testing
+# ===========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ===========================
+# Project Specific
+# ===========================
+# Offline test data
+offline-test/
+test-blender.sh
+install-blender-deps*.sh
+
+# Deployment scripts (sensitive)
+deploy-prod.sh
+*.key
+*.pem
+*.crt
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+*.rar
+

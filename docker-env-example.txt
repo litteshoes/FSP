@@ -1,0 +1,42 @@
+# FSP Docker部署环境变量配置
+# 复制此文件为 .env 并根据需要修改配置
+
+# Flask配置
+FLASK_ENV=production
+FLASK_APP=run.py
+SECRET_KEY=your-secret-key-here
+
+# Celery配置
+CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+
+# 数据库配置（如果需要）
+# DATABASE_URL=postgresql://user:password@db:5432/fsp
+
+# 文件上传配置
+MAX_CONTENT_LENGTH=104857600  # 100MB
+
+# 服务器配置
+HOST=0.0.0.0
+PORT=5000
+
+# 调试模式（生产环境请设为false）
+DEBUG=false
+
+# 日志配置
+LOG_LEVEL=INFO
+LOG_FILE=/app/logs/fsp.log
+
+# Blender配置
+BLENDER_TIMEOUT=300  # 秒
+# 若使用自带 Blender，可不设置。若需自定义路径，设置 BLENDER_PATH（例如 /usr/local/blender/blender）
+#BLENDER_PATH=/usr/local/blender/blender
+
+# FORMIND配置
+FORMIND_TIMEOUT=600  # 秒
+# 若使用自带 FORMIND，可不设置。若需自定义路径，设置 FORMIND_EXECUTABLE（例如 /app/tools/formind/bin/formind）
+#FORMIND_EXECUTABLE=/app/tools/formind/bin/formind
+
+# Redis配置
+REDIS_MAXMEMORY=512mb
+REDIS_MAXMEMORY_POLICY=allkeys-lru

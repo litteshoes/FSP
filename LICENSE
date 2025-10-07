@@ -1,0 +1,78 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright (C) 2024 FSP Development Team
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+================================================================================
+
+THIRD-PARTY COMPONENTS AND LICENSING
+
+This project incorporates or interfaces with the following third-party software:
+
+1. FORMIND Forest Growth Model
+   License: GNU Affero General Public License v3.0 or later
+   Copyright: Helmholtz Centre for Environmental Research (UFZ)
+   Location: tools/formind/
+   
+   FORMIND is licensed under AGPL v3.0 or later. The full license text can be
+   found in tools/formind/license/license.txt
+
+2. Blender 3D Creation Suite
+   License: GNU General Public License v3.0 or later
+   Copyright: Blender Foundation
+   Location: Installed via Dockerfile (not in repository)
+   
+   Blender is licensed under GNU GPL v3.0 or later. The full license text can
+   be found at: https://www.blender.org/about/license/
+   
+   Note: Blender binaries are NOT distributed with this repository. They are
+   automatically downloaded and installed during Docker image build from
+   official Blender mirrors.
+
+================================================================================
+
+LICENSING REQUIREMENTS
+
+Because this project uses:
+- FORMIND (AGPL v3.0+)
+- Blender (GPL v3.0+)
+
+The entire FSP project MUST be licensed under a GPL-compatible license.
+We have chosen the GNU Affero General Public License v3.0 or later to ensure:
+
+1. All modifications to FSP must be shared with users
+2. Network use counts as distribution (AGPL requirement)
+3. Full compatibility with FORMIND's AGPL license
+4. Compliance with Blender's GPL license
+
+================================================================================
+
+FULL LICENSE TEXT
+
+For the complete text of the GNU Affero General Public License v3.0, see:
+https://www.gnu.org/licenses/agpl-3.0.txt
+
+Or visit: https://www.gnu.org/licenses/agpl-3.0.html
+
+================================================================================
+
+CONTRIBUTOR LICENSE AGREEMENT
+
+By contributing to this project, you agree that your contributions will be
+licensed under the same AGPL v3.0+ license.
+
+================================================================================
+

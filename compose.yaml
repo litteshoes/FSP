@@ -1,0 +1,113 @@
+services:
+  # Flask Web application
+  web:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        INSTALL_BLENDER: ${INSTALL_BLENDER:-0}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-}
+        PIP_DEFAULT_TIMEOUT: ${PIP_DEFAULT_TIMEOUT:-1800}
+        USER_ID: ${USER_ID:-1001}
+        GROUP_ID: ${GROUP_ID:-1001}
+    user: "${USER_ID:-1001}:${GROUP_ID:-1001}"
+    container_name: fsp_web
+    command: sh -c "chmod +x /home/jry/FSP/tools/formind/bin/formind 2>/dev/null || true && cd /home/jry/FSP && gunicorn --config backend/gunicorn.conf.py run:app"
+    volumes:
+      - /home/jry/FSP/data:/home/jry/FSP/data:rw
+      - /home/jry/FSP/logs:/home/jry/FSP/logs:rw
+      - /home/jry/FSP/tools:/home/jry/FSP/tools:rw
+      - /home/jry/FSP/app/static:/home/jry/FSP/app/static:rw
+      - /home/jry/FSP/app/templates:/home/jry/FSP/app/templates:rw
+      - /home/jry/FSP/app/static/js:/home/jry/FSP/app/static/js:rw
+    expose:
+      - "5000"
+    depends_on:
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - FLASK_ENV=production
+      - CACHE_TYPE=simple
+      - CACHE_DEFAULT_TIMEOUT=120
+      - DISABLE_BLENDER_EXPORT=${DISABLE_BLENDER_EXPORT:-0}
+      - GUNICORN_WORKERS=${GUNICORN_WORKERS:-1}
+      - GUNICORN_TIMEOUT=${GUNICORN_TIMEOUT:-120}
+      - GUNICORN_LOG_LEVEL=${GUNICORN_LOG_LEVEL:-info}
+      - GUNICORN_ACCESSLOG=${GUNICORN_ACCESSLOG:-/home/jry/FSP/logs/gunicorn.access.log}
+      - GUNICORN_ERRORLOG=${GUNICORN_ERRORLOG:-/home/jry/FSP/logs/gunicorn.error.log}
+      - BASE_DIR=/home/jry/FSP
+      - FORMIND_DIR=/home/jry/FSP/tools/formind
+      - FORMIND_MODEL_DIR=/home/jry/FSP/tools/formind/Formind_Model
+      - FORMIND_BIN_DIR=/home/jry/FSP/tools/formind/bin
+      - FORMIND_EXECUTABLE=/usr/local/bin/formind
+    restart: unless-stopped
+
+  # Celery Worker
+  worker:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        INSTALL_BLENDER: ${INSTALL_BLENDER:-0}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-}
+        PIP_DEFAULT_TIMEOUT: ${PIP_DEFAULT_TIMEOUT:-1800}
+        USER_ID: ${USER_ID:-1001}
+        GROUP_ID: ${GROUP_ID:-1001}
+    container_name: fsp_worker
+    user: "root"
+    privileged: true
+    command: bash -c "Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset >/dev/null 2>&1 & sleep 3 && export DISPLAY=:99 && celery -A celery_config worker -Q simulation --loglevel=info --concurrency=2 --logfile=/home/jry/FSP/logs/celery.worker.log"
+    volumes:
+      - /home/jry/FSP/data:/home/jry/FSP/data:rw
+      - /home/jry/FSP/logs:/home/jry/FSP/logs:rw
+      - /home/jry/FSP/tools:/home/jry/FSP/tools:rw
+      - /home/jry/FSP/app/static:/home/jry/FSP/app/static:rw
+    depends_on:
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - FLASK_ENV=production
+      - CELERY_PREFETCH=${CELERY_PREFETCH:-1}
+      - CELERY_MAX_TASKS_PER_CHILD=${CELERY_MAX_TASKS_PER_CHILD:-50}
+      - CELERY_RESULT_EXPIRES=${CELERY_RESULT_EXPIRES:-3600}
+      - BASE_DIR=/home/jry/FSP
+      - FORMIND_DIR=/home/jry/FSP/tools/formind
+      - FORMIND_MODEL_DIR=/home/jry/FSP/tools/formind/Formind_Model
+      - FORMIND_BIN_DIR=/home/jry/FSP/tools/formind/bin
+      - FORMIND_EXECUTABLE=/usr/local/bin/formind
+      - DISPLAY=:99
+    restart: unless-stopped
+
+  # Redis message queue
+  redis:
+    image: redis:7-alpine
+    container_name: fsp_redis
+    command: redis-server --appendonly yes --maxmemory ${REDIS_MAXMEMORY:-256mb} --maxmemory-policy ${REDIS_MAXMEMORY_POLICY:-allkeys-lru}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: fsp_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./app/static:/usr/share/nginx/html/static:ro
+      - ./app/templates:/usr/share/nginx/html/templates:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - web
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+
+networks:
+  default:
+    driver: bridge
+
+

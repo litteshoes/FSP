@@ -1,0 +1,1136 @@
+201725 execve("/usr/bin/timeout", ["timeout", "20", "./formind", "formind_parameters/simulation.par"], 0x7fff04c34220 /* 35 vars */) = 0
+201725 brk(NULL)                        = 0x5e4075b49000
+201725 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x713ec19b4000
+201725 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+201725 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+201725 fstat(5, {st_mode=S_IFREG|0644, st_size=23659, ...}) = 0
+201725 mmap(NULL, 23659, PROT_READ, MAP_PRIVATE, 5, 0) = 0x713ec19ae000
+201725 close(5)                         = 0
+201725 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+201725 read(5, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0@\0\0\0\0\0\0\0\20^ \0\0\0\0\0\0\0\0\0@\08\0\16\0@\0@\0?\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+201725 pread64(5, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\220s\2\0\0\0\0\0\220s\2\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0"..., 784, 64) = 784
+201725 fstat(5, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+201725 pread64(5, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\220s\2\0\0\0\0\0\220s\2\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0"..., 784, 64) = 784
+201725 mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x713ec1600000
+201725 mmap(0x713ec1628000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x28000) = 0x713ec1628000
+201725 mmap(0x713ec17b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1b0000) = 0x713ec17b0000
+201725 mmap(0x713ec17ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1fe000) = 0x713ec17ff000
+201725 mmap(0x713ec1805000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x713ec1805000
+201725 close(5)                         = 0
+201725 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x713ec19ab000
+201725 arch_prctl(ARCH_SET_FS, 0x713ec19ab740) = 0
+201725 set_tid_address(0x713ec19aba10)  = 201725
+201725 set_robust_list(0x713ec19aba20, 24) = 0
+201725 rseq(0x713ec19ac060, 0x20, 0, 0x53053053) = 0
+201725 mprotect(0x713ec17ff000, 16384, PROT_READ) = 0
+201725 mprotect(0x5e405f176000, 4096, PROT_READ) = 0
+201725 mprotect(0x713ec19ec000, 8192, PROT_READ) = 0
+201725 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+201725 munmap(0x713ec19ae000, 23659)    = 0
+201725 getrandom("\x05\x97\x6b\x99\xa4\xdf\x6a\x71", 8, GRND_NONBLOCK) = 8
+201725 brk(NULL)                        = 0x5e4075b49000
+201725 brk(0x5e4075b6a000)              = 0x5e4075b6a000
+201725 setpgid(0, 0)                    = 0
+201725 rt_sigaction(SIGALRM, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGINT, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGQUIT, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGHUP, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGTERM, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGTERM, {sa_handler=0x5e405f1731e0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[TTIN], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+201725 rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[TTOU], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+201725 rt_sigaction(SIGCHLD, {sa_handler=0x5e405f170350, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, NULL, 8) = 0
+201725 rt_sigprocmask(SIG_UNBLOCK, [CHLD], NULL, 8) = 0
+201725 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x713ec19aba10) = 201726
+201726 set_robust_list(0x713ec19aba20, 24 <unfinished ...>
+201725 rt_sigprocmask(SIG_UNBLOCK, [ALRM],  <unfinished ...>
+201726 <... set_robust_list resumed>)   = 0
+201725 <... rt_sigprocmask resumed>NULL, 8) = 0
+201725 timer_create(CLOCK_REALTIME, {sigev_signo=SIGALRM, sigev_notify=SIGEV_SIGNAL},  <unfinished ...>
+201726 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[TTIN], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330},  <unfinished ...>
+201725 <... timer_create resumed>[0])   = 0
+201726 <... rt_sigaction resumed>{sa_handler=SIG_IGN, sa_mask=[TTIN], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, 8) = 0
+201725 timer_settime(0, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=20, tv_nsec=0}},  <unfinished ...>
+201726 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[TTOU], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330},  <unfinished ...>
+201725 <... timer_settime resumed>NULL) = 0
+201726 <... rt_sigaction resumed>{sa_handler=SIG_IGN, sa_mask=[TTOU], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x713ec1645330}, 8) = 0
+201725 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM CHLD],  <unfinished ...>
+201726 execve("./formind", ["./formind", "formind_parameters/simulation.par"], 0x7ffd659767d0 /* 35 vars */ <unfinished ...>
+201725 <... rt_sigprocmask resumed>[], 8) = 0
+201725 wait4(201726, 0x7ffd65976508, WNOHANG, NULL) = 0
+201725 rt_sigsuspend([], 8 <unfinished ...>
+201726 <... execve resumed>)            = 0
+201726 brk(NULL)                        = 0x5dafadfca000
+201726 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c4e8f39d000
+201726 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=23659, ...}) = 0
+201726 mmap(NULL, 23659, PROT_READ, MAP_PRIVATE, 5, 0) = 0x7c4e8f397000
+201726 close(5)                         = 0
+201726 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 5
+201726 read(5, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0 \205'\0\0\0\0\0\0\0\0\0@\08\0\f\0@\0#\0\"\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0`\304\t\0\0\0\0\0`\304\t\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\320\t\0\0\0\0\0\0\320\t\0\0\0\0\0\0\320\t\0\0\0\0\0\361|\24\0\0\0\0\0\361|\24\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0P\36\0\0\0\0\0\0P\36\0\0\0\0\0"..., 832) = 832
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=2592224, ...}) = 0
+201726 mmap(NULL, 2609472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7c4e8f000000
+201726 mmap(0x7c4e8f09d000, 1343488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x9d000) = 0x7c4e8f09d000
+201726 mmap(0x7c4e8f1e5000, 552960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1e5000) = 0x7c4e8f1e5000
+201726 mmap(0x7c4e8f26c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x26b000) = 0x7c4e8f26c000
+201726 mmap(0x7c4e8f27a000, 12608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c4e8f27a000
+201726 close(5)                         = 0
+201726 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 5
+201726 read(5, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0h\201\16\0\0\0\0\0\0\0\0\0@\08\0\v\0@\0\37\0\36\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\350\366\0\0\0\0\0\0\350\366\0\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\0\1\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0\1\0\0\0\0\0\265\343\7\0\0\0\0\0\265\343\7\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\360\10\0\0\0\0\0\0\360\10\0\0\0\0\0"..., 832) = 832
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=952616, ...}) = 0
+201726 mmap(NULL, 950296, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7c4e8f2ae000
+201726 mmap(0x7c4e8f2be000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x10000) = 0x7c4e8f2be000
+201726 mmap(0x7c4e8f33d000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x8f000) = 0x7c4e8f33d000
+201726 mmap(0x7c4e8f395000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0xe7000) = 0x7c4e8f395000
+201726 close(5)                         = 0
+201726 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 5
+201726 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\303\2\0\0\0\0\0\0\0\0\0@\08\0\f\0@\0\37\0\36\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\3406\0\0\0\0\0\0\3406\0\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0U7\2\0\0\0\0\0U7\2\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0"..., 832) = 832
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0
+201726 mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7c4e8f280000
+201726 mmap(0x7c4e8f284000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x4000) = 0x7c4e8f284000
+201726 mmap(0x7c4e8f2a8000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x28000) = 0x7c4e8f2a8000
+201726 mmap(0x7c4e8f2ac000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x2b000) = 0x7c4e8f2ac000
+201726 close(5)                         = 0
+201726 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+201726 read(5, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0@\0\0\0\0\0\0\0\20^ \0\0\0\0\0\0\0\0\0@\08\0\16\0@\0@\0?\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+201726 pread64(5, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\220s\2\0\0\0\0\0\220s\2\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0"..., 784, 64) = 784
+201726 fstat(5, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+201726 pread64(5, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\3\0\0\0\0\0\0\20\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\240g\35\0\0\0\0\0\34\0\0\0\0\0\0\0\34\0\0\0\0\0\0\0\20\0\0\0\0\0\0\0\1\0\0\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\220s\2\0\0\0\0\0\220s\2\0\0\0\0\0\0\20\0\0\0\0\0\0\1\0\0\0\5\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0\0\200\2\0\0\0\0\0"..., 784, 64) = 784
+201726 mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7c4e8ec00000
+201726 mmap(0x7c4e8ec28000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x28000) = 0x7c4e8ec28000
+201726 mmap(0x7c4e8edb0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1b0000) = 0x7c4e8edb0000
+201726 mmap(0x7c4e8edff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1fe000) = 0x7c4e8edff000
+201726 mmap(0x7c4e8ee05000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c4e8ee05000
+201726 close(5)                         = 0
+201726 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c4e8f27e000
+201726 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c4e8effd000
+201726 arch_prctl(ARCH_SET_FS, 0x7c4e8effd740) = 0
+201726 set_tid_address(0x7c4e8effda10)  = 201726
+201726 set_robust_list(0x7c4e8effda20, 24) = 0
+201726 rseq(0x7c4e8effe060, 0x20, 0, 0x53053053) = 0
+201726 mprotect(0x7c4e8edff000, 16384, PROT_READ) = 0
+201726 mprotect(0x7c4e8f2ac000, 4096, PROT_READ) = 0
+201726 mprotect(0x7c4e8f395000, 4096, PROT_READ) = 0
+201726 mprotect(0x7c4e8f26c000, 45056, PROT_READ) = 0
+201726 mprotect(0x5daf77097000, 8192, PROT_READ) = 0
+201726 mprotect(0x7c4e8f3d5000, 8192, PROT_READ) = 0
+201726 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+201726 munmap(0x7c4e8f397000, 23659)    = 0
+201726 futex(0x7c4e8f27a7bc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+201726 getrandom("\x43\x1c\xdc\x42\x2c\x6d\xdc\x1c", 8, GRND_NONBLOCK) = 8
+201726 brk(NULL)                        = 0x5dafadfca000
+201726 brk(0x5dafadfeb000)              = 0x5dafadfeb000
+201726 openat(AT_FDCWD, "./formind_parameters\\..\\..", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 openat(AT_FDCWD, "./../../../../../../../../../../../../../../../formind-projects/projects_menue.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+201726 brk(0x5dafae01a000)              = 0x5dafae01a000
+201726 brk(0x5dafae04d000)              = 0x5dafae04d000
+201726 brk(0x5dafae06e000)              = 0x5dafae06e000
+201726 openat(AT_FDCWD, "./formind_parameters/simulation.par", O_RDONLY) = 5
+201726 read(5, "comment =============================================================================\ncomment\ncomment\t\tParametrization for Tianmu Mountain based on Amazon (2 PFTs)\ncomment\t\tcontact: Edna Roedig, adapt"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_SET)            = 0
+201726 read(5, "comment =============================================================================\ncomment\ncomment\t\tParametrization for Tianmu Mountain based on Amazon (2 PFTs)\ncomment\t\tcontact: Edna Roedig, adapt"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 8191
+201726 lseek(5, 6878, SEEK_SET)         = 6878
+201726 read(5, "1\t1\nend\n\nfloat\tN_Par.Div_DiaClassWidth\t0.1\n\t\\u m\n\t\\r 0.001 - 2.0\n\t\\d Constant width of each diameter class of the stem size distribution (for output of *.dia)\n\ncomment ================================"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15069
+201726 lseek(5, 6880, SEEK_SET)         = 6880
+201726 read(5, "1\nend\n\nfloat\tN_Par.Div_DiaClassWidth\t0.1\n\t\\u m\n\t\\r 0.001 - 2.0\n\t\\d Constant width of each diameter class of the stem size distribution (for output of *.dia)\n\ncomment =================================="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 0, SEEK_CUR)            = 15071
+201726 lseek(5, 7515, SEEK_SET)         = 7515
+201726 read(5, "860.0\t860.0\nend\n\narray   N_Par.Div_K\n        \\u -\n        \\r 0:1\n        \\d Light extinction coefficient of leaves (group-specific)\n        typeOfArray  float\n        dimension    2\ndata\n\t0.7\t0.7\nend\n"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15706
+201726 lseek(5, 7521, SEEK_SET)         = 7521
+201726 read(5, "860.0\nend\n\narray   N_Par.Div_K\n        \\u -\n        \\r 0:1\n        \\d Light extinction coefficient of leaves (group-specific)\n        typeOfArray  float\n        dimension    2\ndata\n\t0.7\t0.7\nend\n\narray"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 0, SEEK_CUR)            = 15712
+201726 lseek(5, 7703, SEEK_SET)         = 7703
+201726 read(5, "0.7\t0.7\nend\n\narray\tN_Par.Env_DayL_2\n\t\\u h\n\t\\r 0:24\n\t\\d Length of daily photosynthetic active period\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t12.0\t12.0\nend\n\narray\tN_Par.Env_SeaL_2\n\t\\u -\n\t\\r 0:1\n\t\\d Relati"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15894
+201726 lseek(5, 7707, SEEK_SET)         = 7707
+201726 read(5, "0.7\nend\n\narray\tN_Par.Env_DayL_2\n\t\\u h\n\t\\r 0:24\n\t\\d Length of daily photosynthetic active period\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t12.0\t12.0\nend\n\narray\tN_Par.Env_SeaL_2\n\t\\u -\n\t\\r 0:1\n\t\\d Relative l"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 0, SEEK_CUR)            = 15898
+201726 lseek(5, 7841, SEEK_SET)         = 7841
+201726 read(5, "12.0\t12.0\nend\n\narray\tN_Par.Env_SeaL_2\n\t\\u -\n\t\\r 0:1\n\t\\d Relative length of seasons (wetseason/dryseason)\n\ttypeOfArray\tfloat\n\tdimension\t2\n\tdata\n\t1.0\t0.0\nend\n\ncomment ==================================="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16032
+201726 lseek(5, 7846, SEEK_SET)         = 7846
+201726 read(5, "12.0\nend\n\narray\tN_Par.Env_SeaL_2\n\t\\u -\n\t\\r 0:1\n\t\\d Relative length of seasons (wetseason/dryseason)\n\ttypeOfArray\tfloat\n\tdimension\t2\n\tdata\n\t1.0\t0.0\nend\n\ncomment ========================================"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 0, SEEK_CUR)            = 16037
+201726 lseek(5, 7985, SEEK_SET)         = 7985
+201726 read(5, "1.0\t0.0\nend\n\ncomment =============================================================================\ncomment ----------------         Establishment        -------------------------------\ncomment ======="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16176
+201726 lseek(5, 7989, SEEK_SET)         = 7989
+201726 read(5, "0.0\nend\n\ncomment =============================================================================\ncomment ----------------         Establishment        -------------------------------\ncomment ==========="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 0, SEEK_CUR)            = 16180
+201726 lseek(5, 8403, SEEK_SET)         = 8403
+201726 read(5, "200\t50\nend\n\narray\tN_Par.Est_ISeed_3\n\t\\u -\n\t\\r 0:1\n\t\\d Relative minimum light intensity for establishment for diff. growth groups (resp. light groups)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.08\t0.15\nen"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16594
+201726 lseek(5, 8407, SEEK_SET)         = 8407
+201726 read(5, "50\nend\n\narray\tN_Par.Est_ISeed_3\n\t\\u -\n\t\\r 0:1\n\t\\d Relative minimum light intensity for establishment for diff. growth groups (resp. light groups)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.08\t0.15\nend\n\na"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 0, SEEK_CUR)            = 16598
+201726 lseek(5, 8591, SEEK_SET)         = 8591
+201726 read(5, "0.08\t0.15\nend\n\narray\tN_Par.Est_SeedMort_3\n\t\\u 1/(year)\n\t\\r 0:1\n\t\\d Mortality rate of seeds in seedpool for diff. lgrp\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.4\t0.8\nend\n\nfloat\tN_Par.Est_DS\t0.001\n\t\\u m\n"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16782
+201726 lseek(5, 8596, SEEK_SET)         = 8596
+201726 read(5, "0.15\nend\n\narray\tN_Par.Est_SeedMort_3\n\t\\u 1/(year)\n\t\\r 0:1\n\t\\d Mortality rate of seeds in seedpool for diff. lgrp\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.4\t0.8\nend\n\nfloat\tN_Par.Est_DS\t0.001\n\t\\u m\n\t\\r 0"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 0, SEEK_CUR)            = 16787
+201726 lseek(5, 8747, SEEK_SET)         = 8747
+201726 read(5, "0.4\t0.8\nend\n\nfloat\tN_Par.Est_DS\t0.001\n\t\\u m\n\t\\r 0:0.1\n\t\\d Diameter of Seedlings at establishment\n\n\narray\tN_Par.Max_Den\n\t\\u per patch and species\n\t\\r 0:999999\n\t\\d Maximum number of established seedling"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16938
+201726 lseek(5, 8751, SEEK_SET)         = 8751
+201726 read(5, "0.8\nend\n\nfloat\tN_Par.Est_DS\t0.001\n\t\\u m\n\t\\r 0:0.1\n\t\\d Diameter of Seedlings at establishment\n\n\narray\tN_Par.Max_Den\n\t\\u per patch and species\n\t\\r 0:999999\n\t\\d Maximum number of established seedlings fo"..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 0, SEEK_CUR)            = 16942
+201726 lseek(5, 9010, SEEK_SET)         = 9010
+201726 read(5, "16.0\t16.0\nend\n\n\ncomment =============================================================================\ncomment ----------------       Mortality         ------------------------------------\ncomment ===="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 17201
+201726 lseek(5, 9015, SEEK_SET)         = 9015
+201726 read(5, "16.0\nend\n\n\ncomment =============================================================================\ncomment ----------------       Mortality         ------------------------------------\ncomment ========="..., 8191) = 8191
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 0, SEEK_CUR)            = 17206
+201726 lseek(5, 9439, SEEK_SET)         = 9439
+201726 read(5, "1\t2\nend\ncomment f(D)   : 0(2nd order polynom) 1(a0: maxmort, a1 maxborder)\ncomment f(dinc): 0(2nd order polynom) 1(Exponential b0*e^b1*dinc) 2(Swaine: 0.02 + b0 * dinc + b1 * dinc^2 + b2 * dinc^3)\n\n\na"..., 8191) = 7882
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9441, SEEK_SET)         = 9441
+201726 read(5, "2\nend\ncomment f(D)   : 0(2nd order polynom) 1(a0: maxmort, a1 maxborder)\ncomment f(dinc): 0(2nd order polynom) 1(Exponential b0*e^b1*dinc) 2(Swaine: 0.02 + b0 * dinc + b1 * dinc^2 + b2 * dinc^3)\n\n\narr"..., 8191) = 7880
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9769, SEEK_SET)         = 9769
+201726 read(5, "0.02\t0.03\nend\n\n\narray\tN_Par.Mort_Dia_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t0.0\t0.0\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc"..., 8191) = 7552
+201726 brk(0x5dafae08f000)              = 0x5dafae08f000
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9774, SEEK_SET)         = 9774
+201726 read(5, "0.03\nend\n\n\narray\tN_Par.Mort_Dia_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t0.0\t0.0\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t"..., 8191) = 7547
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9917, SEEK_SET)         = 9917
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t15"..., 8191) = 7404
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9921, SEEK_SET)         = 9921
+201726 read(5, "0.0\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7"..., 8191) = 7400
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9926, SEEK_SET)         = 9926
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-11"..., 8191) = 7395
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9926, SEEK_SET)         = 9926
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-11"..., 8191) = 7395
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9930, SEEK_SET)         = 9930
+201726 read(5, "0.0\n\t0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150"..., 8191) = 7391
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9935, SEEK_SET)         = 9935
+201726 read(5, "0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113"..., 8191) = 7386
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9935, SEEK_SET)         = 9935
+201726 read(5, "0.0\t0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113"..., 8191) = 7386
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9939, SEEK_SET)         = 9939
+201726 read(5, "0.0\nend\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113150\n"..., 8191) = 7382
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 9943, SEEK_SET)         = 9943
+201726 read(5, "end\n\narray\tN_Par.Mort_Dinc_31\n\t\\u 1/a\n\t\\r 0:1\n\t\\d Specific mortality rate as function of diameter increment\n\ttypeOfArray\tfloat\n\tdimension\t3 2\ndata\n\t-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113150\nend\n"..., 8191) = 7378
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10091, SEEK_SET)        = 10091
+201726 read(5, "-7.7175\t-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment ======================================"..., 8191) = 7230
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10099, SEEK_SET)        = 10099
+201726 read(5, "-7.7175\n\t1553.7\t1553.7\n\t-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment =============================================="..., 8191) = 7222
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10108, SEEK_SET)        = 10108
+201726 read(5, "1553.7\t1553.7\n\t-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment ======================================================="..., 8191) = 7213
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10108, SEEK_SET)        = 10108
+201726 read(5, "1553.7\t1553.7\n\t-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment ======================================================="..., 8191) = 7213
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10115, SEEK_SET)        = 10115
+201726 read(5, "1553.7\n\t-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment =============================================================="..., 8191) = 7206
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10123, SEEK_SET)        = 10123
+201726 read(5, "-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment ======================================================================"..., 8191) = 7198
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10123, SEEK_SET)        = 10123
+201726 read(5, "-113150\t-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment ======================================================================"..., 8191) = 7198
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10131, SEEK_SET)        = 10131
+201726 read(5, "-113150\nend\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment =============================================================================\n"..., 8191) = 7190
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10139, SEEK_SET)        = 10139
+201726 read(5, "end\n\n\nfloat\tN_Par.Mort_FallP\t0.4\n\t\\u -\n\t\\r 0:1\n\t\\d Probability of dying trees (d>10cm) to fall |old: 0.4\n\ncomment =============================================================================\ncomment "..., 8191) = 7182
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10661, SEEK_SET)        = 10661
+201726 read(5, "2\t0\t0\t1\t2\t1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*"..., 8191) = 6660
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10663, SEEK_SET)        = 10663
+201726 read(5, "0\t0\t1\t2\t1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+"..., 8191) = 6658
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10665, SEEK_SET)        = 10665
+201726 read(5, "0\t1\t2\t1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1"..., 8191) = 6656
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10667, SEEK_SET)        = 10667
+201726 read(5, "1\t2\t1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d"..., 8191) = 6654
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10669, SEEK_SET)        = 10669
+201726 read(5, "2\t1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2"..., 8191) = 6652
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10671, SEEK_SET)        = 10671
+201726 read(5, "1\t0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2+a"..., 8191) = 6650
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10673, SEEK_SET)        = 10673
+201726 read(5, "0\t0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2+a2*"..., 8191) = 6648
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10675, SEEK_SET)        = 10675
+201726 read(5, "0\t0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2+a2*d^"..., 8191) = 6646
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 10677, SEEK_SET)        = 10677
+201726 read(5, "0\nend\ncomment HD   : 0(2nd order polynom) 1(h=d/(1/h0+d/h1))  2 (h=h1*d^h2)\ncomment XX   : unused\ncomment CD   : 0(c=a0*d)            1(c=a0*d+a1*d^2)        2(c=d/(1/a0+d/a1)) 3(c=a0*d+a1*d^2+a2*d^3)"..., 8191) = 6644
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11579, SEEK_SET)        = 11579
+201726 read(5, "30\t20\nend\n\narray   N_Par.Geo_HD_39\n\t\\u divers\n\t\\r 0:100\n\t\\d Parameter of height-to-diameter-curves for different hgrp\n\ttypeOfArray     float\n\tdimension\t3\t2\ndata\n\t62.4\t19.6\n\t0.87\t0.50\n\t0.00\t0.00\nend\n\n\n"..., 8191) = 5742
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11582, SEEK_SET)        = 11582
+201726 read(5, "20\nend\n\narray   N_Par.Geo_HD_39\n\t\\u divers\n\t\\r 0:100\n\t\\d Parameter of height-to-diameter-curves for different hgrp\n\ttypeOfArray     float\n\tdimension\t3\t2\ndata\n\t62.4\t19.6\n\t0.87\t0.50\n\t0.00\t0.00\nend\n\n\narr"..., 8191) = 5739
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11741, SEEK_SET)        = 11741
+201726 read(5, "62.4\t19.6\n\t0.87\t0.50\n\t0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t"..., 8191) = 5580
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11746, SEEK_SET)        = 11746
+201726 read(5, "19.6\n\t0.87\t0.50\n\t0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\nd"..., 8191) = 5575
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11752, SEEK_SET)        = 11752
+201726 read(5, "0.87\t0.50\n\t0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4"..., 8191) = 5569
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11752, SEEK_SET)        = 11752
+201726 read(5, "0.87\t0.50\n\t0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4"..., 8191) = 5569
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11757, SEEK_SET)        = 11757
+201726 read(5, "0.50\n\t0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4.0\t5."..., 8191) = 5564
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11763, SEEK_SET)        = 11763
+201726 read(5, "0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4.0\t5.0\n\t0.1"..., 8191) = 5558
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11763, SEEK_SET)        = 11763
+201726 read(5, "0.00\t0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4.0\t5.0\n\t0.1"..., 8191) = 5558
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11768, SEEK_SET)        = 11768
+201726 read(5, "0.00\nend\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4.0\t5.0\n\t0.15\t0.1"..., 8191) = 5553
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11773, SEEK_SET)        = 11773
+201726 read(5, "end\n\n\narray   N_Par.Geo_LAIT_21\n\t\\u divers\n\t\\r 0:10\n    \\d Parameter of leafarea index for single tree as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t4.0\t5.0\n\t0.15\t0.12\n\t0."..., 8191) = 5548
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11951, SEEK_SET)        = 11951
+201726 read(5, "4.0\t5.0\n\t0.15\t0.12\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0"..., 8191) = 5370
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11955, SEEK_SET)        = 11955
+201726 read(5, "5.0\n\t0.15\t0.12\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0"..., 8191) = 5366
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11960, SEEK_SET)        = 11960
+201726 read(5, "0.15\t0.12\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0"..., 8191) = 5361
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11960, SEEK_SET)        = 11960
+201726 read(5, "0.15\t0.12\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0"..., 8191) = 5361
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11965, SEEK_SET)        = 11965
+201726 read(5, "0.12\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0."..., 8191) = 5356
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11971, SEEK_SET)        = 11971
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n"..., 8191) = 5350
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11971, SEEK_SET)        = 11971
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n"..., 8191) = 5350
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11975, SEEK_SET)        = 11975
+201726 read(5, "0.0\nend\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narr"..., 8191) = 5346
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 11979, SEEK_SET)        = 11979
+201726 read(5, "end\n\narray   N_Par.Geo_CD_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown diameter as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t3 2\ndata\n\t28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray  "..., 8191) = 5342
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12139, SEEK_SET)        = 12139
+201726 read(5, "28.2\t49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.05"..., 8191) = 5182
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12144, SEEK_SET)        = 12144
+201726 read(5, "49.9\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n  "..., 8191) = 5177
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12150, SEEK_SET)        = 12150
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6"..., 8191) = 5171
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12150, SEEK_SET)        = 12150
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6"..., 8191) = 5171
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12154, SEEK_SET)        = 12154
+201726 read(5, "0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6164\t"..., 8191) = 5167
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12159, SEEK_SET)        = 12159
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6164\t-0.57"..., 8191) = 5162
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12159, SEEK_SET)        = 12159
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6164\t-0.57"..., 8191) = 5162
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12163, SEEK_SET)        = 12163
+201726 read(5, "0.0\nend\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6164\t-0.5719\ne"..., 8191) = 5158
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12167, SEEK_SET)        = 12167
+201726 read(5, "end\n\narray   N_Par.Geo_FD_31\n\t\\u divers\n\t\\r 0:10\n        \\d Parameters of form factor as function of diameter-curves\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.1379\t0.0505\n    -0.6164\t-0.5719\nend\n\n"..., 8191) = 5154
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12328, SEEK_SET)        = 12328
+201726 read(5, "0.1379\t0.0505\n    -0.6164\t-0.5719\nend\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0"..., 8191) = 4993
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12335, SEEK_SET)        = 12335
+201726 read(5, "0.0505\n    -0.6164\t-0.5719\nend\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0.56\t0.5"..., 8191) = 4986
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12346, SEEK_SET)        = 12346
+201726 read(5, "-0.6164\t-0.5719\nend\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0.56\t0.53\n\t0.0\t0.0\n"..., 8191) = 4975
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12346, SEEK_SET)        = 12346
+201726 read(5, "-0.6164\t-0.5719\nend\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0.56\t0.53\n\t0.0\t0.0\n"..., 8191) = 4975
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12354, SEEK_SET)        = 12354
+201726 read(5, "-0.5719\nend\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0.56\t0.53\n\t0.0\t0.0\n\t0.0\t0.0"..., 8191) = 4967
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12362, SEEK_SET)        = 12362
+201726 read(5, "end\n\narray   N_Par.Geo_CLFH_31\n\t\\u divers\n\t\\r 0:10\n    \\d Parameters of crown length factor as function of height-curves\n\ttypeOfArray     float\n\tdimension\t3 1\ndata\n\t0.56\t0.53\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\nar"..., 8191) = 4959
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12527, SEEK_SET)        = 12527
+201726 read(5, "0.56\t0.53\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0."..., 8191) = 4794
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12532, SEEK_SET)        = 12532
+201726 read(5, "0.53\n\t0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0"..., 8191) = 4789
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12538, SEEK_SET)        = 12538
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend"..., 8191) = 4783
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12538, SEEK_SET)        = 12538
+201726 read(5, "0.0\t0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend"..., 8191) = 4783
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12542, SEEK_SET)        = 12542
+201726 read(5, "0.0\n\t0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend\ncom"..., 8191) = 4779
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12547, SEEK_SET)        = 12547
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend\ncomment "..., 8191) = 4774
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12547, SEEK_SET)        = 12547
+201726 read(5, "0.0\t0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend\ncomment "..., 8191) = 4774
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12551, SEEK_SET)        = 12551
+201726 read(5, "0.0\nend\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend\ncomment TR  "..., 8191) = 4770
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12555, SEEK_SET)        = 12555
+201726 read(5, "end\n\narray   N_Par.Geo_TR_21\n\t\\u divers\n\t\\r 0:1\n    \\d Fraction of stem to total biomass (FUNCTION[5]=0: site dependent)\n\ttypeOfArray     float\n\tdimension\t2 2\ndata\n\t0.89\t0.36\n\t0\t0\nend\ncomment TR  : ->"..., 8191) = 4766
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12720, SEEK_SET)        = 12720
+201726 read(5, "0.89\t0.36\n\t0\t0\nend\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1"..., 8191) = 4601
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12725, SEEK_SET)        = 12725
+201726 read(5, "0.36\n\t0\t0\nend\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d "..., 8191) = 4596
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12731, SEEK_SET)        = 12731
+201726 read(5, "0\t0\nend\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d height"..., 8191) = 4590
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12731, SEEK_SET)        = 12731
+201726 read(5, "0\t0\nend\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d height"..., 8191) = 4590
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12733, SEEK_SET)        = 12733
+201726 read(5, "0\nend\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d height o"..., 8191) = 4588
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 12735, SEEK_SET)        = 12735
+201726 read(5, "end\ncomment TR  : ->0(tr=t0+t1*(H(d=1.20,lgrp=0))) 1(TR=a0)\n\n\nfloat\tN_Par.Geo_RB\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d Fraction of root biomass to stem biomass\n    \nfloat\tN_Par.Geo_RH\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d height of "..., 8191) = 4586
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 13383, SEEK_SET)        = 13383
+201726 read(5, "1\t4.5\nend\n\n\narray\tN_Par.Pro_Alpha_3\n\t\\u mikromol(CO_2)/mikromol(photons)\n\t\\r 0:1\n\t\\d Slope of light response curve for different growth groups (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.03"..., 8191) = 3938
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 13385, SEEK_SET)        = 13385
+201726 read(5, "4.5\nend\n\n\narray\tN_Par.Pro_Alpha_3\n\t\\u mikromol(CO_2)/mikromol(photons)\n\t\\r 0:1\n\t\\d Slope of light response curve for different growth groups (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.035\t"..., 8191) = 3936
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 13579, SEEK_SET)        = 13579
+201726 read(5, "0.035\t0.048\nend\n\n\nfloat\tN_Par.Pro_GLoss\t0.25\n\t\\u -\n\t\\r 0:1\n\t\\d GrowthRespirationFactor\n\nstring N_Par.Growth_Function_Switch \"chanter\"\n\t\\u -\n\t\\r \"polynom\",\"weibull\",\"richards\",\"chanter\",\"chanter_maxPos"..., 8191) = 3742
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 13585, SEEK_SET)        = 13585
+201726 read(5, "0.048\nend\n\n\nfloat\tN_Par.Pro_GLoss\t0.25\n\t\\u -\n\t\\r 0:1\n\t\\d GrowthRespirationFactor\n\nstring N_Par.Growth_Function_Switch \"chanter\"\n\t\\u -\n\t\\r \"polynom\",\"weibull\",\"richards\",\"chanter\",\"chanter_maxPos\"\n\t\\d "..., 8191) = 3736
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14202, SEEK_SET)        = 14202
+201726 read(5, "18.5\t12.8\n    3.8\t4.2\n\t0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.P"..., 8191) = 3119
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14207, SEEK_SET)        = 14207
+201726 read(5, "12.8\n    3.8\t4.2\n\t0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t"..., 8191) = 3114
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14216, SEEK_SET)        = 14216
+201726 read(5, "3.8\t4.2\n\t0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -"..., 8191) = 3105
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14216, SEEK_SET)        = 14216
+201726 read(5, "3.8\t4.2\n\t0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -"..., 8191) = 3105
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14220, SEEK_SET)        = 14220
+201726 read(5, "4.2\n\t0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r"..., 8191) = 3101
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14225, SEEK_SET)        = 14225
+201726 read(5, "0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n"..., 8191) = 3096
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14225, SEEK_SET)        = 14225
+201726 read(5, "0\t0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n"..., 8191) = 3096
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14227, SEEK_SET)        = 14227
+201726 read(5, "0\n\t0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\"..., 8191) = 3094
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14230, SEEK_SET)        = 14230
+201726 read(5, "0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d T"..., 8191) = 3091
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14230, SEEK_SET)        = 14230
+201726 read(5, "0\t0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d T"..., 8191) = 3091
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14232, SEEK_SET)        = 14232
+201726 read(5, "0\nend\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d Tra"..., 8191) = 3089
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14234, SEEK_SET)        = 14234
+201726 read(5, "end\n\narray\tN_Par.Pro_Rho_3\n\t\\u t(odm)/m^3\n\t\\r 0:2\n\t\\d Wood density for different pfts  (frueher lgrp)\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d Trans"..., 8191) = 3087
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14374, SEEK_SET)        = 14374
+201726 read(5, "0.39\t0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d Transmission coefficient of leaves\n\nfloat\tN_Par.Pro_RD\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d root density\n\nfloat\tN_Par.Pro_RCON\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d conversion "..., 8191) = 2947
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 14379, SEEK_SET)        = 14379
+201726 read(5, "0.48\nend\n\nfloat\tN_Par.Pro_M\t0.1\n\t\\u -\n\t\\r 0:1\n\t\\d Transmission coefficient of leaves\n\nfloat\tN_Par.Pro_RD\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d root density\n\nfloat\tN_Par.Pro_RCON\t0.0\n\t\\u -\n\t\\r 0:1\n\t\\d conversion facto"..., 8191) = 2942
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15075, SEEK_SET)        = 15075
+201726 read(5, "1\t1\t1\t1\t1\t1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncom"..., 8191) = 2246
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15077, SEEK_SET)        = 15077
+201726 read(5, "1\t1\t1\t1\t1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomme"..., 8191) = 2244
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15079, SEEK_SET)        = 15079
+201726 read(5, "1\t1\t1\t1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomment"..., 8191) = 2242
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15081, SEEK_SET)        = 15081
+201726 read(5, "1\t1\t1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomment -"..., 8191) = 2240
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15083, SEEK_SET)        = 15083
+201726 read(5, "1\t1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomment ---"..., 8191) = 2238
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15085, SEEK_SET)        = 15085
+201726 read(5, "1\nend\n\narray N_Par.Climate_File\n\ttypeOfArray\tstring\n\tdimension 1\n\tdata\n\t\t\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomment -----"..., 8191) = 2236
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15158, SEEK_SET)        = 15158
+201726 read(5, "\"Climate/climate.txt\"\n\tend\n\ncomment =============================================================================\ncomment ----------------      reference climate for maint. respiration      ---------\n"..., 8191) = 2163
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15641, SEEK_SET)        = 15641
+201726 read(5, "1.0\t1.0\nend\n\narray N_Par.ref_Irradiance \n\t\\u [mmol photon/sec m]\n\t\\r 0:1500\n\t\\d ref irradiance in every time step\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t860\t860\nend\n\narray\tN_Par.ref_environment_reducti"..., 8191) = 1680
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15645, SEEK_SET)        = 15645
+201726 read(5, "1.0\nend\n\narray N_Par.ref_Irradiance \n\t\\u [mmol photon/sec m]\n\t\\r 0:1500\n\t\\d ref irradiance in every time step\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t860\t860\nend\n\narray\tN_Par.ref_environment_reduction \n"..., 8191) = 1676
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15793, SEEK_SET)        = 15793
+201726 read(5, "860\t860\nend\n\narray\tN_Par.ref_environment_reduction \n\t\\u []\n\t\\r 0:1\n\t\\d reference reduction  because of temperature\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t1.0\t1.0\nend\n\ncomment =========================="..., 8191) = 1528
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15797, SEEK_SET)        = 15797
+201726 read(5, "860\nend\n\narray\tN_Par.ref_environment_reduction \n\t\\u []\n\t\\r 0:1\n\t\\d reference reduction  because of temperature\n\ttypeOfArray\tfloat\n\tdimension\t2\ndata\n\t1.0\t1.0\nend\n\ncomment =============================="..., 8191) = 1524
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15946, SEEK_SET)        = 15946
+201726 read(5, "1.0\t1.0\nend\n\ncomment =============================================================================\ncomment ----------------      Carbon Module    --------------------------------------\ncomment ======="..., 8191) = 1375
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 15950, SEEK_SET)        = 15950
+201726 read(5, "1.0\nend\n\ncomment =============================================================================\ncomment ----------------      Carbon Module    --------------------------------------\ncomment ==========="..., 8191) = 1371
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 17126, SEEK_SET)        = 17126
+201726 read(5, "20\nend\n\narray\tN_Par.Water_FC\n\t\\u Volume percent\n\t\\r 0:100\n\t\\d Field capacity \n\t\\i 0 \n\ttypeOfArray\tfloat\n\tdimension\t1\ndata \n\t43\nend\n\t\nfloat N_Par.Water_SD 1.0\n\t\\u [m]\n\t\\r 0:100\n\t\\d soil depth [m] ", 8191) = 195
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 17250, SEEK_SET)        = 17250
+201726 read(5, "43\nend\n\t\nfloat N_Par.Water_SD 1.0\n\t\\u [m]\n\t\\r 0:100\n\t\\d soil depth [m] ", 8191) = 71
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 lseek(5, 0, SEEK_CUR)            = 17321
+201726 read(5, "", 8191)                = 0
+201726 close(5)                         = 0
+201726 mkdir("./formind_parameters/../results", 0775) = -1 EEXIST (File exists)
+201726 mmap(NULL, 823296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c4e8ef34000
+201726 openat(AT_FDCWD, "./formind_parameters/simulation.pin", O_RDONLY) = 5
+201726 read(5, "file pinfile\r\nregionheader = \"Custom Plot from CSV - 2 PFTs\"\r\ndclass =\r\n0.001 0.024 0.048 0.072 0.096 0.12 0.144 0.168 0.192 0.216 0.24 0.264 0.288 0.312 0.336 0.36 0.384 0.408 0.432 0.456 0.48 0.504 "..., 8191) = 8191
+201726 brk(0x5dafae0b0000)              = 0x5dafae0b0000
+201726 read(5, " =\r\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\r\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"..., 8191) = 223
+201726 brk(0x5dafae0d4000)              = 0x5dafae0d4000
+201726 brk(0x5dafae0f8000)              = 0x5dafae0f8000
+201726 brk(0x5dafae11c000)              = 0x5dafae11c000
+201726 munmap(0x7c4e8ef34000, 823296)   = 0
+201726 close(5)                         = 0
+201726 openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 5
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=561, ...}) = 0
+201726 fstat(5, {st_mode=S_IFREG|0644, st_size=561, ...}) = 0
+201726 read(5, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\35\0\0\0\3\0\0\0\f\200\0\0\0\240\227\242\200\241y\4\360\310Y^\200\311\t\371p\311\323\275\0\313\5\212\360\313|@\0\322;>\360\323\213{\200\324B\255\360\325E\"\0\326L\277\360\327<\277\0\330\6fp\331\35\362\200\331A|\360\36\272R \37i\233\220 ~\204\240!I}\220\"g\241 #)_\220$G\203 %\22|\20&'e &\362^\20(\7G (\322@\20\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\1\2\0\0q\327\0\0\0\0~\220\1"..., 4096) = 561
+201726 lseek(5, -342, SEEK_CUR)         = 219
+201726 read(5, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\35\0\0\0\3\0\0\0\f\377\377\377\377~6C)\377\377\377\377\240\227\242\200\377\377\377\377\241y\4\360\377\377\377\377\310Y^\200\377\377\377\377\311\t\371p\377\377\377\377\311\323\275\0\377\377\377\377\313\5\212\360\377\377\377\377\313|@\0\377\377\377\377\322;>\360\377\377\377\377\323\213{\200\377\377\377\377\324B\255\360\377\377\377\377\325E\"\0\377\377\377\377\326L\277\360\377\377\377\377\327<\277\0\377\377\377\377\330\6fp\377\377\377\377\331\35\362\200\377\377\377\377\331A|\360\0\0\0\0\36\272R \0\0\0\0\37i\233\220\0\0\0\0"..., 4096) = 342
+201726 close(5)                         = 0
+201726 mkdir("./formind_parameters/../results", 0775) = -1 EEXIST (File exists)
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.res", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+201726 fstat(5, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.dia", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 6
+201726 fstat(6, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.sv", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 7
+201726 fstat(7, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.n", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 8
+201726 fstat(8, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.bt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 9
+201726 fstat(9, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.ba", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 10
+201726 fstat(10, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.sv_th", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 11
+201726 fstat(11, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.n_th", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 12
+201726 fstat(12, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.bt_th", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 13
+201726 fstat(13, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.ba_th", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 14
+201726 fstat(14, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.plot", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 15
+201726 fstat(15, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.mort", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 16
+201726 fstat(16, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.prod", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 18
+201726 fstat(18, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.lai_mean", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 19
+201726 fstat(19, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.env", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 22
+201726 fstat(22, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.water", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 23
+201726 fstat(23, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.cflux", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 24
+201726 fstat(24, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 openat(AT_FDCWD, "./formind_parameters/../results/simulation.cfluxplot", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 25
+201726 fstat(25, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+201726 --- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=NULL} ---
+201726 +++ killed by SIGSEGV (core dumped) +++
+201725 <... rt_sigsuspend resumed>)     = ? ERESTARTNOHAND (To be restarted if no handler)
+201725 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_DUMPED, si_pid=201726, si_uid=1001, si_status=SIGSEGV, si_utime=0, si_stime=1 /* 0.01 s */} ---
+201725 rt_sigreturn({mask=[HUP INT QUIT ALRM TERM CHLD]}) = -1 EINTR (Interrupted system call)
+201725 wait4(201726, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGSEGV && WCOREDUMP(s)}], WNOHANG, NULL) = 201726
+201725 write(2, "timeout: ", 9)         = 9
+201725 write(2, "the monitored command dumped core", 33) = 33
+201725 write(2, "\n", 1)                = 1
+201725 prctl(PR_SET_DUMPABLE, SUID_DUMP_DISABLE) = 0
+201725 rt_sigaction(SIGSEGV, 0x7ffd65976240, 0x7ffd659762e0, 8) = 0
+201725 rt_sigprocmask(SIG_UNBLOCK, 0x7ffd65976430, NULL, 8) = 0
+201725 gettid()                         = 201725
+201725 getpid()                         = 201725
+201725 tgkill(201725, 201725, SIGSEGV)  = 0
+201725 --- SIGSEGV {si_signo=SIGSEGV, si_code=SI_TKILL, si_pid=201725, si_uid=1001} ---
+201725 +++ killed by SIGSEGV +++

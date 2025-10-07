@@ -1,0 +1,5 @@
+
+ERROR: Cannot open file for reading: /home/jry/FSP/tools/formind/bin/simulation.par . File: for_iommparset.h  Line: 1358
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  ERROR: Cannot open file for reading: /home/jry/FSP/tools/formind/bin/simulation.par . File: for_iommparset.h  Line: 1358
+timeout: the monitored command dumped core

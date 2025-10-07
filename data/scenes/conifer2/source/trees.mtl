@@ -1,0 +1,80 @@
+newmtl nature_bark_fir_02_l_0001.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_bark_fir_02_l_0001.jpg
+map_Bump nature_bark_fir_02_l_0001_b.png
+newmtl nature_leaves_thuja_01_l_0006.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0006.jpg
+map_d nature_leaves_thuja_01_l_0006_t.png
+newmtl nature_leaves_thuja_01_l_0002.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0002.jpg
+map_d nature_leaves_thuja_01_l_0002_t.png
+newmtl nature_leaves_thuja_01_l_0001.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0001.jpg
+map_d nature_leaves_thuja_01_l_0001_t.png
+newmtl nature_leaves_thuja_01_l_0004.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0004.jpg
+map_d nature_leaves_thuja_01_l_0004_t.png
+newmtl nature_leaves_thuja_01_l_0007.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0007.jpg
+map_d nature_leaves_thuja_01_l_0007_t.png
+newmtl nature_leaves_thuja_01_l_0005.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0005.jpg
+map_d nature_leaves_thuja_01_l_0005_t.png
+newmtl nature_leaves_thuja_01_l_0003.jpg
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.6
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 1
+map_Kd nature_leaves_thuja_01_l_0003.jpg
+map_d nature_leaves_thuja_01_l_0003_t.png

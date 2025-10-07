@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n##*******************************************\n## 1. Setup\n##*******************************************\n\nlibrary(FAST) #loads FAST package\n\nsetwd(\"C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject\")\n#********************************************\n# 2. the fast-function\n#********************************************\nmodel<-\"FORMIND/formind.exe\"\n\nparameterFile<-\"bci4.par\"\ndata<-fast(model,parameterFile)\n\n\n",
+    "created" : 1491988946971.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "809672848",
+    "id" : "BC9ABDB",
+    "lastKnownWriteTime" : 1492001337,
+    "last_content_update" : 1492001337487,
+    "path" : "C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject/FORMINDAnalysisWithR/fastAnalysis.r",
+    "project_path" : "fastAnalysis.r",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

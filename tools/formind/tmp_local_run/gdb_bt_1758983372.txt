@@ -1,0 +1,32 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+formindGrow::FoutofD (d=0.43093320543300534, pft=pft@entry=0, rho=<optimized out>, this=0x0) at for_grow.cpp:984
+984		int which = N_Par.Geo_FUNCTION_7[3];
+#0  formindGrow::FoutofD (d=0.43093320543300534, pft=pft@entry=0, rho=<optimized out>, this=0x0) at for_grow.cpp:984
+#1  0x0000555555578661 in formindGrow::InitMaximumDiameter (this=this@entry=0x55555561d740 <forGrow>) at for_grow.cpp:389
+#2  0x00005555555bdc5e in Formind::InitSimulation (this=this@entry=0x7fffffffe58f) at formind.cpp:707
+#3  0x00005555555bed4d in Formind::Start (this=this@entry=0x7fffffffe58f) at formind.cpp:387
+#4  0x0000555555566af6 in main (argc=2, argv=0x7fffffffe6f8) at main.cpp:39
+  Id   Target Id                                    Frame 
+* 1    Thread 0x7ffff7e9b740 (LWP 214228) "formind" formindGrow::FoutofD (d=0.43093320543300534, pft=pft@entry=0, rho=<optimized out>, this=0x0) at for_grow.cpp:984
+
+Thread 1 (Thread 0x7ffff7e9b740 (LWP 214228) "formind"):
+#0  formindGrow::FoutofD (d=0.43093320543300534, pft=pft@entry=0, rho=<optimized out>, this=0x0) at for_grow.cpp:984
+        ff = <optimized out>
+        which = 1
+        f0 = 0.13789999999999999
+        f1 = -0.61639999999999995
+        f2 = <optimized out>
+#1  0x0000555555578661 in formindGrow::InitMaximumDiameter (this=this@entry=0x55555561d740 <forGrow>) at for_grow.cpp:389
+        pft = 0
+#2  0x00005555555bdc5e in Formind::InitSimulation (this=this@entry=0x7fffffffe58f) at formind.cpp:707
+        plot = <optimized out>
+        hec = <optimized out>
+        maxclass = <optimized out>
+#3  0x00005555555bed4d in Formind::Start (this=this@entry=0x7fffffffe58f) at formind.cpp:387
+No locals.
+#4  0x0000555555566af6 in main (argc=2, argv=0x7fffffffe6f8) at main.cpp:39
+        error = 0
+        formind_model = {<No data fields>}

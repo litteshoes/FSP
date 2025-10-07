@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "##*******************************************\n## 1. Setup: where is what\n##*******************************************\n#path to the folder MyLittleProject e.g:\nyourPath<-\"C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject/\"\n\nsetwd(yourPath) \n# now R nows where your little Project is located on you computer..\nFORMINDFolder = paste0(yourPath,\"FORMIND/\") \n#...where the Model can be found...\ngraphicFolder = paste0(yourPath,\"Graphics/\") \n#...and where the grafiks of your simulations should be placed.\n\n# install the package FAST and its dependencies\ninstall.packages(\"Hmisc\",\"data.table\",\"RColorBrewer\",\"openair\") \n# these packages are needed to run FAST\ninstall.packages(\"FAST.zip\",repos = NULL, dependencies = T)\n\n",
+    "created" : 1484737929374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3729056667",
+    "id" : "9748BD28",
+    "lastKnownWriteTime" : 1494225525,
+    "last_content_update" : 1494225525344,
+    "path" : "C:/Daten/FORMIND-TRUNK/formind-analysis/FAST/MyLittleProject/FORMINDAnalysisWithR/R/Setup.r",
+    "project_path" : "R/Setup.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
